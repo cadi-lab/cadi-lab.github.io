@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+<div class="page-header">
+  <h1>{{ page.title }}</h1>
+  {% if page.description %}
+  <p>{{ page.description }}</p>
+  {% endif %}
+</div>
+
+<div class="container page-content">
+
+  {% assign courses = site.data.courses.courses %}
+
+  <h2 class="section-heading" style="font-size: 1.3rem; margin-bottom: 1.5rem;">
+    <i class="fa-solid fa-chalkboard-user" style="color: var(--secondary); margin-right: 0.5rem;"></i> Courses
+  </h2>
+
+  <div class="courses-grid">
+    {% for course in courses %}
+    <div class="course-card" id="{{ course.id }}">
+      <div class="course-icon">
+        <i class="{{ course.icon }}"></i>
+      </div>
+      <div class="course-header">
+        <span class="course-code">{{ course.code }}</span>
+        <span class="course-series {{ course.series | downcase }}">{{ course.series }}</span>
+      </div>
+      <h2 class="course-title">{{ course.title }}</h2>
+      <div class="course-meta">
+        <span><i class="fa-solid fa-calendar"></i> {{ course.semester }}</span>
+        <span><i class="fa-solid fa-clock"></i> {{ course.time }}</span>
+        <span><i class="fa-solid fa-location-dot"></i> {{ course.location }}</span>
+        <span><i class="fa-solid fa-graduation-cap"></i> {{ course.level }}</span>
+      </div>
+      <p class="course-desc">{{ course.description }}</p>
+      <div class="course-topics">
+        <h4>Key Topics</h4>
+        <div class="topic-tags">
+          {% for topic in course.topics %}
+          <span class="topic-tag">{{ topic }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="course-actions">
+        {% if course.syllabus_url %}
+        <a href="{{ site.pi_homepage }}{{ course.syllabus_url }}" target="_blank" class="btn btn-sm btn-outline">
+          <i class="fa-solid fa-file-pdf"></i> Syllabus
+        </a>
+        {% endif %}
+        {% if course.homepage_url %}
+        <a href="{{ site.pi_homepage }}{{ course.homepage_url }}" target="_blank" class="btn btn-sm btn-outline">
+          <i class="fa-solid fa-house"></i> Course Homepage
+        </a>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {{ content }}
+
+</div>

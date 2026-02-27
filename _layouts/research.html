@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<div class="page-header">
+  <h1>{{ page.title }}</h1>
+  {% if page.description %}
+  <p>{{ page.description }}</p>
+  {% endif %}
+</div>
+
+<div class="container page-content">
+
+  {% assign research = site.data.research %}
+
+  {% for area in research.areas %}
+  <section class="research-topic" id="{{ area.id }}">
+    <div class="topic-header">
+      <i class="{{ area.icon }}"></i>
+      <div>
+        <h2>{{ area.title }}</h2>
+        <p class="topic-desc">{{ area.description }}</p>
+      </div>
+    </div>
+
+    <div class="papers-list">
+      {% for paper in area.papers %}
+      <div class="paper-item">
+        <div class="paper-status-badge {{ paper.status | slugify }}">{{ paper.status }}</div>
+        <h3 class="paper-title">{{ paper.title }}</h3>
+        <div class="paper-authors">{{ paper.authors }}</div>
+        {% if paper.venue != "" and paper.venue %}
+        <div class="paper-venue">
+          <i class="fa-solid fa-book-open"></i> {{ paper.venue }}
+          {% if paper.venue_note %}<span class="venue-note">({{ paper.venue_note }})</span>{% endif %}
+        </div>
+        {% endif %}
+        {% if paper.award %}
+        <div class="paper-award"><i class="fa-solid fa-trophy"></i> {{ paper.award }}</div>
+        {% endif %}
+        {% if paper.links %}
+        <div class="paper-links">
+          {% if paper.links.html %}<a href="{{ paper.links.html }}" target="_blank"><i class="fa-solid fa-link"></i> Link</a>{% endif %}
+          {% if paper.links.ssrn %}<a href="{{ paper.links.ssrn }}" target="_blank"><i class="fa-solid fa-file-lines"></i> SSRN</a>{% endif %}
+          {% if paper.links.arxiv %}<a href="{{ paper.links.arxiv }}" target="_blank"><i class="fa-solid fa-file-lines"></i> arXiv</a>{% endif %}
+          {% if paper.links.video and paper.links.video != "" %}<a href="{{ paper.links.video }}" target="_blank"><i class="fa-solid fa-video"></i> Video</a>{% endif %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+
+
+</div>

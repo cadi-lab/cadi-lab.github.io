@@ -1,0 +1,130 @@
+# CADI Lab Members Data
+# Causal Analysis for Digital Interventions Lab
+
+professor:
+  name: "Jaewon Yoo"
+  name_local: "유재원"
+  name_alt: "\"Jay-One\"; 兪在元, Yú Zài-Yuán"
+  title: "Assistant Professor"
+  department: "Institute of Service Science"
+  college: "College of Technology Management"
+  university: "National Tsing Hua University (NTHU)"
+  photo: "prof_jaewon_yoo.jpg"
+  bio: >
+    Before joining NTHU, Dr. Yoo was a visiting postdoc fellow at NYU Shanghai.
+    He received his Ph.D. from KAIST College of Business.
+    His research investigates how platform and technology design choices shape user behavior
+    and market outcomes through frictions in decision-making and execution.
+  research_interests:
+    - "Causal Inference"
+    - "Platform Economics"
+    - "Digital Markets"
+    - "Quasi-Experimental Methods"
+    - "Counterfactual Reasoning"
+    - "Explainable AI"
+  links:
+    homepage: "https://j1yoo.github.io"
+    email: "jaewon.yoo@iss.nthu.edu.tw"
+    scholar: "https://scholar.google.com/citations?user=6vinVNUAAAAJ"
+    office: "TSMC Building, Office 828B"
+  address:
+    line1: "Office 828B, TSMC Building"
+    line2: "National Tsing Hua University"
+    line3: "101, Kuang-Fu Rd., Sec. 2"
+    line4: "Hsinchu, Taiwan 300"
+
+current_students:
+  - name: "Ting-Wen (Keri) Liu"
+    degree: "M.S."
+    year: "2026-"
+    program: "Institute of Service Science, NTHU"
+    photo: ""
+    research_tags: []
+
+  - name: "John Loui Santiago"
+    degree: "M.S."
+    year: "2025-"
+    program: "iMBA, NTHU"
+    photo: ""
+    research_tags: []
+
+  - name: "Mave Kimara Alexander"
+    degree: "M.S."
+    year: "2025-"
+    program: "iMBA, NTHU"
+    photo: ""
+    research_tags: []
+
+  - name: "Young Shin"
+    degree: "Undergraduate RA"
+    year: "2025-"
+    program: "College of EECS, NTHU"
+    photo: ""
+    research_tags: []
+
+alumni:
+  - name: "Zhan-Yi Liao"
+    degree: "M.S."
+    year: "2023-25"
+    program: "Institute of Information Management, NYCU"
+    photo: ""
+    thesis: "Structure-Aware Robust Counterfactual Explanations via Conditional Gaussian Network Classifiers"
+    thesis_url: "https://thesis.lib.nycu.edu.tw/items/afad6b16-1a74-4d3b-9af9-6d0546212a73"
+    note: "Co-advised with Po-An Chen (NYCU)"
+    github: "https://github.com/zhanyiliao"
+
+  - name: "Pei-Jou (Pearl) Lin"
+    degree: "M.S."
+    year: "2023-25"
+    program: "Institute of Service Science, NTHU"
+    photo: "pearl_lin.jpeg"
+    thesis: "Effects of Paid Family Leave Policy on Firm Risk-Taking: A Quasi-Experimental Approach"
+    thesis_url: "https://etd.lib.nthu.edu.tw/detail/c25e999348b0136aceab80dc25d730b2/"
+
+  - name: "Natasha Carissa Tedjasukmana"
+    degree: "M.S."
+    year: "2023-25"
+    program: "iMBA, NTHU"
+    photo: ""
+    thesis: "Unintended Consequences of Sales Ban: Empirical Analysis of the Book Retailing Industry"
+    thesis_url: "https://etd.lib.nthu.edu.tw/detail/12ad09d982483923e9982de20ed0191c/"
+
+  - name: "Medjine Nestant"
+    degree: "M.S."
+    year: "2023-25"
+    program: "iMBA, NTHU"
+    photo: ""
+    thesis: "When Algorithms Go Silent: Effects of Trending Topic Suspension on Political Information Consumption"
+    thesis_url: "https://etd.lib.nthu.edu.tw/detail/252b0089ebe61c7618327accc66ba0ec/"
+
+  - name: "Sin-Yu (Celine) Lin"
+    degree: "M.S."
+    year: "2022-24"
+    program: "Institute of Service Science, NTHU"
+    photo: ""
+    thesis: "Influence of Message Framing on Consumer Adoption of AI Services: Evidence from the Financial Sector"
+    thesis_url: "https://etd.lib.nthu.edu.tw/detail/668262f8f04ca01c4f1b938a1a3b0412/"
+
+  - name: "Yu-Chen (Amy) Hsiao"
+    degree: "M.S."
+    year: "2022-24"
+    program: "Institute of Service Science, NTHU"
+    photo: ""
+    thesis: "Examining the Impact of Paid Family and Medical Leave Policy on Firm Innovation: Evidence from Quasi-Experiments"
+    thesis_url: "https://etd.lib.nthu.edu.tw/detail/0570df8a7951673cc90d245c94b48a0f/"
+
+  - name: "Daniel Vinicio Gonzalez de Leon"
+    degree: "M.S."
+    year: "2021-23"
+    program: "iMBA, NTHU"
+    photo: "daniel_gonzalez.jpg"
+    thesis: "Evaluating Risk-Reducing Incentives to Influence Consumers' Purchase Decision of Private-Label Products"
+    thesis_url: "https://etd.lib.nthu.edu.tw/detail/eb793427d2f5d99a24007a84ca1fd4e9/"
+
+  - name: "Yichun (Jean) Liu"
+    degree: "M.S."
+    year: "2021-23"
+    program: "Institute of Service Science, NTHU"
+    photo: "jean_liu.jpg"
+    thesis: "Does CSR Visibility Lead to Superior Financial Performance? Evidence from a Regression Discontinuity Design"
+    thesis_url: "https://etd.lib.nthu.edu.tw/detail/3debccdc9b57b7596044c3c05ffe1b1b/"

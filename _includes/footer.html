@@ -1,0 +1,39 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-info">
+      <div class="footer-brand">
+        <span class="logo-mark">CADI</span> <span class="logo-text">Lab</span>
+      </div>
+      <p>Causal Analysis for Digital Interventions Lab</p>
+      <p class="footer-affil">
+        <a href="https://www.nthu.edu.tw" target="_blank">National Tsing Hua University</a> &middot;
+        <a href="https://ctm.nthu.edu.tw" target="_blank">College of Technology Management</a>
+      </p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/people/' | relative_url }}">People</a>
+        <a href="{{ '/research/' | relative_url }}">Research</a>
+        <a href="{{ '/teaching/' | relative_url }}">Education</a>
+        <a href="{{ '/join/' | relative_url }}">Join Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="mailto:{{ site.pi_email }}"><i class="fa-solid fa-envelope"></i> Email</a>
+        <a href="{{ site.pi_homepage }}" target="_blank"><i class="fa-solid fa-globe"></i> PI Homepage</a>
+        <a href="https://scholar.google.com/citations?user=6vinVNUAAAAJ" target="_blank"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>
+      </div>
+      <div class="footer-col">
+        <h4><i class="fa-solid fa-location-dot"></i> Find Us</h4>
+        {% assign addr = site.data.lab_members.professor.address %}
+        <p>{{ addr.line1 }}<br>{{ addr.line2 }}</p>
+        <p>{{ addr.line3 }}<br>{{ addr.line4 }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; {{ 'now' | date: "%Y" }} CADI Lab, National Tsing Hua University. All rights reserved.</p>
+  </div>
+</footer>

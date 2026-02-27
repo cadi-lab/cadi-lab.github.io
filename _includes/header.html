@@ -1,0 +1,22 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a href="{{ '/' | relative_url }}" class="site-logo">
+      <span class="logo-mark">CADI</span>
+      <span class="logo-text">Lab</span>
+    </a>
+    <nav class="site-nav" id="site-nav">
+      <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
+      <a href="{{ '/people/' | relative_url }}" class="{% if page.url contains '/people' %}active{% endif %}">People</a>
+      <a href="{{ '/research/' | relative_url }}" class="{% if page.url contains '/research' %}active{% endif %}">Research</a>
+      <a href="{{ '/teaching/' | relative_url }}" class="{% if page.url contains '/teaching' %}active{% endif %}">Education</a>
+      <a href="{{ '/gallery/' | relative_url }}" class="{% if page.url contains '/gallery' %}active{% endif %}">Gallery</a>
+      <a href="{{ '/join/' | relative_url }}" class="{% if page.url contains '/join' %}active{% endif %}">Join Us</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </div>
+</header>

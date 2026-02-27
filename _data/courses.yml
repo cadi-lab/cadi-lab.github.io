@@ -1,0 +1,50 @@
+# CADI Lab Education
+
+courses:
+  - id: eci
+    title: "Experiments and Causal Inference"
+    code: "ISS5096"
+    level: "Graduate"
+    series: "Methods"
+    semester: "Spring"
+    time: "Thursday, 14:20–17:20"
+    location: "TSMC Building, Room R406"
+    description: >
+      A graduate seminar on experimental and quasi-experimental designs for causal inference.
+      This course introduces methods widely used in domains such as marketing, information systems,
+      and the social sciences for establishing cause-and-effect relationships from data.
+    topics:
+      - "Randomized Controlled Trials (RCT)"
+      - "Difference-in-Differences (DiD)"
+      - "Matching Methods (PSM, CEM)"
+      - "Regression Discontinuity Design (RDD)"
+      - "Instrumental Variables (IV)"
+      - "Causal Machine Learning"
+      - "DAGs & Causal Mechanisms"
+      - "Panel Data & Fixed Effects"
+    syllabus_url: "/assets/courses/eci/ECI_Syllabus.pdf"
+    homepage_url: "/teaching/eci/"
+    icon: "fa-solid fa-flask"
+
+  - id: pba
+    title: "Programming for Business Analytics"
+    code: "ISS4066 / ISS5066"
+    level: "Undergraduate / Graduate"
+    series: "Skills"
+    semester: "Fall"
+    time: "Monday, 14:20–17:20"
+    location: "TSMC Building, Room R421"
+    description: >
+      This course introduces the basics of programming using R for business applications.
+      It equips students with fundamental skills for robust business data analysis,
+      addressing both practical programming skills and conceptual understanding necessary
+      to apply data science effectively in business contexts.
+    topics:
+      - "R Programming Fundamentals"
+      - "Data Wrangling & Visualization"
+      - "Causality & Regression"
+      - "Statistical Uncertainty"
+      - "Bootstrapping vs. CLT"
+      - "Professional Workflow (R, RStudio, Git, GitHub)"
+    syllabus_url: "/assets/courses/pba/ISS4066_PBA_Undergrad_Syllabus_Fall_25.pdf"
+    icon: "fa-solid fa-code"

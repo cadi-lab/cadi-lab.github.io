@@ -1,0 +1,187 @@
+---
+layout: default
+---
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-kicker">{{ page.hero_kicker }}</p>
+    <h1 class="hero-title">{{ page.hero_title }}</h1>
+    <p class="hero-subtitle">{{ page.hero_subtitle }}</p>
+    <div class="hero-actions">
+      <a href="{{ '/research/' | relative_url }}" class="btn btn-outline">Our Research</a>
+      <a href="{{ '/people/' | relative_url }}" class="btn btn-outline">Meet the Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- Research Areas -->
+{% if page.research_areas %}
+<section class="section" id="research-areas">
+  <div class="container">
+    <h2 class="section-title">Research Areas</h2>
+    <p class="section-subtitle">{{ page.research_areas_subtitle }}</p>
+    <div class="research-grid research-grid--home">
+      {% for area in page.research_areas %}
+      <div class="research-card">
+        <div class="research-icon">
+          <i class="{{ area.icon }}"></i>
+        </div>
+        <h3>{{ area.title }}</h3>
+        <p>{{ area.description }}</p>
+        {% if area.tags %}
+        <div class="tag-list">
+          {% for tag in area.tags %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- People -->
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="section-title">People</h2>
+    <p class="section-subtitle">Meet the researchers behind CADI Lab.</p>
+
+    <!-- Professor -->
+    {% assign prof = site.data.lab_members.professor %}
+    <div class="professor-card">
+      <div class="professor-photo">
+        {% if prof.photo %}
+        <img src="{{ '/assets/img/' | append: prof.photo | relative_url }}" alt="{{ prof.name }}">
+        {% endif %}
+      </div>
+      <div class="professor-info">
+        <h2>{{ prof.name }} <span class="name-local">({{ prof.name_local }}; {{ prof.name_alt }})</span></h2>
+        <div class="professor-title">
+          {{ prof.title }}, {{ prof.department }}<br>
+          {{ prof.college }}, {{ prof.university }}
+        </div>
+        <div class="professor-tags">
+          {% for interest in prof.research_interests %}
+          <span class="tag">{{ interest }}</span>
+          {% endfor %}
+        </div>
+        <p class="professor-bio">{{ prof.bio }}</p>
+        <div class="professor-links">
+          {% if prof.links.homepage %}
+          <a href="{{ prof.links.homepage }}" target="_blank"><i class="fa-solid fa-globe"></i> Homepage</a>
+          {% endif %}
+          {% if prof.links.email %}
+          <a href="mailto:{{ prof.links.email }}"><i class="fa-solid fa-envelope"></i> Email</a>
+          {% endif %}
+          {% if prof.links.scholar %}
+          <a href="{{ prof.links.scholar }}" target="_blank"><i class="fa-brands fa-google-scholar"></i> Scholar</a>
+          {% endif %}
+          {% if prof.links.office %}
+          <a href="#"><i class="fa-solid fa-location-dot"></i> {{ prof.links.office }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Current Students -->
+    {% assign students = site.data.lab_members.current_students %}
+    {% if students.size > 0 %}
+    <h2 class="category-title">
+      Current Students <span class="count">({{ students.size }})</span>
+    </h2>
+    <div class="students-grid">
+      {% for student in students %}
+      <div class="student-card">
+        <div class="student-avatar">
+          {% assign name_parts = student.name | split: ' ' %}
+          {% assign first_char = name_parts[0] | slice: 0 %}
+          {% assign last_part = name_parts | last %}
+          {% assign last_char = last_part | slice: 0 %}
+          <span class="initials">{{ first_char }}{{ last_char }}</span>
+        </div>
+        <div class="student-info">
+          <div class="student-name">
+            {{ student.name }}
+            {% if student.github %}
+            <a href="{{ student.github }}" target="_blank" class="gh-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            {% endif %}
+          </div>
+          <div class="student-meta">{{ student.degree }} &middot; {{ student.program }} &middot; {{ student.year }}</div>
+          {% if student.research_tags.size > 0 %}
+          <div class="student-tags">
+            {% for tag in student.research_tags %}
+            <span class="tag-sm">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+          {% if student.note %}
+          <div class="student-note">{{ student.note }}</div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Alumni -->
+    {% assign alumni = site.data.lab_members.alumni %}
+    {% if alumni.size > 0 %}
+    <h2 class="category-title">
+      Alumni <span class="count">({{ alumni.size }})</span>
+    </h2>
+    <div class="alumni-list">
+      {% for alum in alumni %}
+      <div class="alumni-item">
+        <div class="alumni-year">{{ alum.year }}</div>
+        <div class="alumni-info">
+          <span class="alumni-name">{{ alum.name }}</span>
+          <span class="alumni-degree">&middot; {{ alum.degree }}, {{ alum.program }}</span>
+          {% if alum.thesis %}
+          <div class="alumni-thesis">
+            Thesis:
+            {% if alum.thesis_url %}
+            <a href="{{ alum.thesis_url }}" target="_blank">{{ alum.thesis }}</a>
+            {% else %}
+            {{ alum.thesis }}
+            {% endif %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div style="text-align: center; margin-top: 1.5rem;">
+      <a href="{{ '/people/' | relative_url }}" class="btn btn-primary">
+        View Full Profiles <i class="fa-solid fa-arrow-right" style="font-size: 0.85rem;"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Additional Content -->
+{% assign stripped_content = content | strip %}
+{% if stripped_content != '' and stripped_content != blank %}
+<section class="section">
+  <div class="container">
+    {{ content }}
+  </div>
+</section>
+{% endif %}
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-banner">
+      <h3>Interested in Joining CADI Lab?</h3>
+      <p>We are always looking for motivated students who are passionate about causal inference and digital platform research.</p>
+      <a href="{{ '/join/' | relative_url }}" class="btn">
+        <i class="fa-solid fa-arrow-right"></i> Learn More
+      </a>
+    </div>
+  </div>
+</section>

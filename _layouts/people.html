@@ -1,0 +1,241 @@
+---
+layout: default
+---
+
+<!-- Page Header -->
+<div class="page-header">
+  <h1>{{ page.title }}</h1>
+  {% if page.description %}
+  <p>{{ page.description }}</p>
+  {% endif %}
+</div>
+
+<div class="container page-content">
+
+  <!-- ═══ Professor (People page version — compact) ═══ -->
+  {% assign prof = site.data.lab_members.professor %}
+  <div class="professor-card professor-card--page">
+    <div class="professor-photo">
+      {% if prof.photo %}
+      <img src="{{ '/assets/img/' | append: prof.photo | relative_url }}" alt="{{ prof.name }}" class="photo-clickable" data-full="{{ '/assets/img/' | append: prof.photo | relative_url }}">
+      {% endif %}
+    </div>
+    <div class="professor-info">
+      <h2>{{ prof.name }} <span class="name-local">({{ prof.name_local }}; {{ prof.name_alt }})</span></h2>
+      <div class="professor-title">
+        {{ prof.title }}, {{ prof.department }}<br>
+        {{ prof.college }}, {{ prof.university }}
+      </div>
+      <div class="professor-tags">
+        {% for interest in prof.research_interests %}
+        <span class="tag">{{ interest }}</span>
+        {% endfor %}
+      </div>
+      <div class="professor-links">
+        {% if prof.links.homepage %}
+        <a href="{{ prof.links.homepage }}" target="_blank"><i class="fa-solid fa-globe"></i> Homepage</a>
+        {% endif %}
+        {% if prof.links.email %}
+        <a href="mailto:{{ prof.links.email }}"><i class="fa-solid fa-envelope"></i> Email</a>
+        {% endif %}
+        {% if prof.links.scholar %}
+        <a href="{{ prof.links.scholar }}" target="_blank"><i class="fa-brands fa-google-scholar"></i> Scholar</a>
+        {% endif %}
+        {% if prof.links.office %}
+        <a href="#"><i class="fa-solid fa-location-dot"></i> {{ prof.links.office }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Current Students — Single Column ═══ -->
+  {% assign students = site.data.lab_members.current_students %}
+  {% if students.size > 0 %}
+  <h2 class="category-title">
+    Current Students <span class="count">({{ students.size }})</span>
+  </h2>
+  <div class="people-list">
+    {% for student in students %}
+    <div class="people-profile-card people-profile-card--wide">
+      <div class="profile-photo profile-photo--lg">
+        {% if student.photo != "" and student.photo %}
+        <img src="{{ '/assets/img/' | append: student.photo | relative_url }}" alt="{{ student.name }}" class="photo-clickable" data-full="{{ '/assets/img/' | append: student.photo | relative_url }}">
+        {% else %}
+        {% assign name_parts = student.name | split: ' ' %}
+        {% assign first_char = name_parts[0] | slice: 0 %}
+        {% assign last_part = name_parts | last %}
+        {% assign last_char = last_part | slice: 0 %}
+        <span class="profile-initials profile-initials--lg">{{ first_char }}{{ last_char }}</span>
+        {% endif %}
+      </div>
+      <div class="profile-body">
+        <h3 class="profile-name">{{ student.name }}</h3>
+        <div class="profile-meta">
+          <span><i class="fa-solid fa-graduation-cap"></i> {{ student.degree }}, {{ student.program }}</span>
+          <span><i class="fa-solid fa-calendar"></i> {{ student.year }}</span>
+        </div>
+        {% if student.research_tags.size > 0 %}
+        <div class="profile-tags">
+          {% for tag in student.research_tags %}
+          <span class="tag-sm">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if student.bio %}
+        <p class="profile-bio">{{ student.bio }}</p>
+        {% endif %}
+        {% if student.note %}
+        <p class="profile-note">{{ student.note }}</p>
+        {% endif %}
+        <div class="profile-links">
+          {% if student.github %}
+          <a href="{{ student.github }}" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          {% endif %}
+          {% if student.linkedin %}
+          <a href="{{ student.linkedin }}" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          {% endif %}
+          {% if student.website %}
+          <a href="{{ student.website }}" target="_blank" title="Website"><i class="fa-solid fa-globe"></i></a>
+          {% endif %}
+          {% if student.email %}
+          <a href="mailto:{{ student.email }}" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- ═══ Alumni — Year Timeline ═══ -->
+  {% assign alumni = site.data.lab_members.alumni %}
+  {% if alumni.size > 0 %}
+  <h2 class="category-title">
+    Alumni <span class="count">({{ alumni.size }})</span>
+  </h2>
+  <div class="alumni-timeline">
+    {% assign alumni_by_year = alumni | group_by: "year" %}
+    {% for group in alumni_by_year %}
+    <div class="timeline-group">
+      <div class="timeline-marker">
+        <span class="timeline-dot"></span>
+        <span class="timeline-year-label">{{ group.name }}</span>
+      </div>
+      <div class="timeline-cards">
+        {% for alum in group.items %}
+        <div class="people-profile-card people-profile-card--wide">
+          <div class="profile-photo profile-photo--lg">
+            {% if alum.photo != "" and alum.photo %}
+            <img src="{{ '/assets/img/' | append: alum.photo | relative_url }}" alt="{{ alum.name }}" class="photo-clickable" data-full="{{ '/assets/img/' | append: alum.photo | relative_url }}">
+            {% else %}
+            {% assign name_parts = alum.name | split: ' ' %}
+            {% assign first_char = name_parts[0] | slice: 0 %}
+            {% assign last_part = name_parts | last %}
+            {% assign last_char = last_part | slice: 0 %}
+            <span class="profile-initials profile-initials--lg">{{ first_char }}{{ last_char }}</span>
+            {% endif %}
+          </div>
+          <div class="profile-body">
+            <h3 class="profile-name">{{ alum.name }}</h3>
+            <div class="profile-meta">
+              <span><i class="fa-solid fa-graduation-cap"></i> {{ alum.degree }}, {{ alum.program }}</span>
+            </div>
+            {% if alum.thesis %}
+            <div class="profile-thesis">
+              <i class="fa-solid fa-file-lines"></i>
+              {% if alum.thesis_url %}
+              <a href="{{ alum.thesis_url }}" target="_blank">{{ alum.thesis }}</a>
+              {% else %}
+              {{ alum.thesis }}
+              {% endif %}
+            </div>
+            {% endif %}
+            {% if alum.current_position %}
+            <div class="profile-position">
+              <i class="fa-solid fa-briefcase"></i> {{ alum.current_position }}
+            </div>
+            {% endif %}
+            {% if alum.note %}
+            <p class="profile-note">{{ alum.note }}</p>
+            {% endif %}
+            <div class="profile-links">
+              {% if alum.github %}
+              <a href="{{ alum.github }}" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              {% endif %}
+              {% if alum.linkedin %}
+              <a href="{{ alum.linkedin }}" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              {% endif %}
+              {% if alum.website %}
+              <a href="{{ alum.website }}" target="_blank" title="Website"><i class="fa-solid fa-globe"></i></a>
+              {% endif %}
+              {% if alum.email %}
+              <a href="mailto:{{ alum.email }}" title="Email"><i class="fa-solid fa-envelope"></i></a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- Additional Content -->
+  {% if content != '' and content != blank %}
+  <div style="margin-top: 2rem;">
+    {{ content }}
+  </div>
+  {% endif %}
+
+</div>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-banner">
+      <h3>Interested in Joining CADI Lab?</h3>
+      <p>We welcome motivated students who are passionate about causal inference, digital platform research, and counterfactual reasoning.</p>
+      <a href="{{ '/join/' | relative_url }}" class="btn">
+        <i class="fa-solid fa-arrow-right"></i> Learn More
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Photo Lightbox -->
+<div class="lightbox" id="photoLightbox">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+(function() {
+  const lightbox = document.getElementById('photoLightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = lightbox.querySelector('.lightbox-close');
+
+  document.querySelectorAll('.photo-clickable').forEach(function(img) {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function() {
+      lightboxImg.src = this.getAttribute('data-full') || this.src;
+      lightboxImg.alt = this.alt;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+})();
+</script>

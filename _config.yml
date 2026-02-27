@@ -1,0 +1,42 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# CADI Lab — Site Configuration
+# ──────────────────────────────────────────────────────────────────────────────
+
+title: CADI Lab
+description: >-
+  Causal Analysis for Digital Interventions Lab at
+  National Tsing Hua University, College of Technology Management.
+url: "https://cadilab.github.io"
+baseurl: ""
+
+# Build
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections (optional for future use)
+# collections:
+#   publications:
+#     output: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Lab-specific
+pi_homepage: "https://j1yoo.github.io"
+pi_email: "jaewon.yoo@iss.nthu.edu.tw"
