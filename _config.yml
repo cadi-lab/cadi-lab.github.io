@@ -39,6 +39,7 @@ defaults:
       path: ""
     values:
       layout: default
+      image: /assets/img/og-image.png
 
 # SEO / Social sharing
 image: /assets/img/og-image.png
