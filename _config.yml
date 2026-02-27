@@ -6,7 +6,10 @@ title: CADI Lab
 description: >-
   Causal Analysis for Digital Interventions Lab at
   National Tsing Hua University, College of Technology Management.
-url: "https://cadilab.github.io"
+url: "https://cadi-lab.github.io"
+
+# Google Analytics
+google_analytics: G-F2Y4X86JTT
 baseurl: ""
 
 # Build
