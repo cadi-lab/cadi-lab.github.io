@@ -153,6 +153,7 @@ html:not([data-theme="dark"]) .site-header {
   color: var(--text);
   cursor: pointer;
   padding: 0.4rem;
+  margin-left: auto;
 }
 
 .theme-toggle {
@@ -164,7 +165,7 @@ html:not([data-theme="dark"]) .site-header {
   cursor: pointer;
   padding: 0.4rem 0.6rem;
   transition: all 0.2s;
-  margin-left: 0.5rem;
+  margin-left: 0.75rem;
 
   &:hover {
     background: rgba($secondary, 0.08);
