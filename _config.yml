@@ -40,6 +40,11 @@ defaults:
     values:
       layout: default
 
+# SEO / Social sharing
+image: /assets/img/og-image.png
+twitter:
+  card: summary_large_image
+
 # Lab-specific
 pi_homepage: "https://j1yoo.github.io"
 pi_email: "jaewon.yoo@iss.nthu.edu.tw"
