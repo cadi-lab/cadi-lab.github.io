@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <style>
-    .bg { fill: #1a365d; }
-    .letter { fill: #ffffff; font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; font-weight: 800; font-size: 34px; }
+    .bg { fill: #e2e8f0; }
+    .letter { fill: #0f172a; font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; font-weight: 800; font-size: 34px; }
     .accent-bar { fill: #0891b2; }
   </style>
   <rect class="bg" width="64" height="64" rx="14"/>

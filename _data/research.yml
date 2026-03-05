@@ -11,16 +11,14 @@ areas:
         status: "Under review"
         venue: "Information Systems Research"
         venue_note: "UTD24, FT50"
-        links:
-          video: "https://www.youtube.com/watch?v=PLACEHOLDER"
+        links: {}
 
       - title: "Interactive Blind Lead-In Ads and Purchase Conversion: The Roles of Completion and Creative Design Features"
         authors: "Yoon, S., <strong>Yoo, J.*</strong>, Kim, M., Kim, W., Lee, M.S."
         status: "Revise & Resubmit"
         venue: "Journal of Interactive Marketing"
         venue_note: "SSCI"
-        links:
-          video: ""
+        links: {}
 
       - title: "Helping Hands to Bear the Burden of Choice: Recommendations from Similar, but Not Close, Others Reduce Choice Difficulty"
         authors: "<strong>Yoo, J.</strong>, Kim, W.*, Ackerman, J."

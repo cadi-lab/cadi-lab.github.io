@@ -43,8 +43,19 @@
   const ICON_DARK  = '<i class="fa-solid fa-moon"></i>';
   const ICON_LIGHT = '<i class="fa-solid fa-sun"></i>';
 
+  function setFavicon(theme) {
+    var faviconLink = document.querySelector("link[rel='icon'][type='image/svg+xml']");
+    if (!faviconLink) return;
+    if (theme === 'dark') {
+      faviconLink.href = '/assets/img/favicon.svg';
+    } else {
+      faviconLink.href = '/assets/img/favicon_dark.svg';
+    }
+  }
+
   function applyTheme(theme) {
     html.setAttribute('data-theme', theme);
+    setFavicon(theme);
     if (toggle) {
       toggle.innerHTML = theme === 'dark' ? ICON_LIGHT : ICON_DARK;
       toggle.setAttribute('aria-label',
@@ -52,8 +63,11 @@
     }
   }
 
-  // Initialise from localStorage, default to dark
-  var saved = localStorage.getItem(THEME_KEY) || 'dark';
+  // Initialise: localStorage > system preference > dark fallback
+  var saved = localStorage.getItem(THEME_KEY);
+  if (!saved) {
+    saved = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
   applyTheme(saved);
 
   if (toggle) {

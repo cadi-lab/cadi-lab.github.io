@@ -67,6 +67,7 @@ body {
   color: var(--text);
   line-height: 1.6;
   transition: background 0.3s ease, color 0.3s ease;
+  overflow-wrap: break-word;
 }
 
 a { color: var(--secondary); text-decoration: none; transition: color 0.2s; }
@@ -207,7 +208,7 @@ html[data-theme="dark"] .hero {
 }
 
 .hero-kicker {
-  font-size: 0.85rem;
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -224,7 +225,7 @@ html[data-theme="dark"] .hero {
 }
 
 .hero-subtitle {
-  font-size: 1.1rem;
+  font-size: clamp(0.92rem, 2.5vw, 1.1rem);
   line-height: 1.7;
   opacity: 0.9;
   max-width: 640px;
@@ -326,7 +327,7 @@ html[data-theme="dark"] .hero {
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 800;
   text-align: center;
   margin-bottom: 0.5rem;
@@ -336,7 +337,7 @@ html[data-theme="dark"] .hero {
 .section-subtitle {
   text-align: center;
   color: var(--text-muted);
-  font-size: 1.05rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.05rem);
   margin-bottom: 3rem;
   max-width: 600px;
   margin-left: auto;
@@ -516,12 +517,12 @@ html[data-theme="dark"] {
   background: linear-gradient(135deg, $primary 0%, $primary-light 100%);
   color: #fff;
   border-radius: 16px;
-  padding: 3rem;
+  padding: clamp(1.5rem, 5vw, 3rem);
   text-align: center;
 
-  h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.75rem; }
+  h3 { font-size: clamp(1.15rem, 3vw, 1.4rem); font-weight: 700; margin-bottom: 0.75rem; }
   p {
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
     opacity: 0.9;
     max-width: 560px;
     margin: 0 auto 1.5rem;
@@ -546,20 +547,20 @@ html[data-theme="dark"] .cta-banner {
   text-align: center;
   padding: 3rem 1.5rem 1.5rem;
 
-  h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.02em; }
-  p { color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin: 0.5rem auto 0; }
+  h1 { font-size: clamp(1.6rem, 5vw, 2.2rem); font-weight: 800; letter-spacing: -0.02em; }
+  p { color: var(--text-muted); font-size: clamp(0.9rem, 2.5vw, 1.05rem); max-width: 600px; margin: 0.5rem auto 0; }
 }
 
 // ─── Professor Card ─────────────────────────────────────────────────────────
 
 .professor-card {
   display: flex;
-  gap: 2.5rem;
-  padding: 2rem;
+  gap: 2rem;
+  padding: 1.5rem;
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 16px;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -575,8 +576,8 @@ html[data-theme="dark"] .cta-banner {
 .professor-photo {
   flex-shrink: 0;
   img {
-    width: 180px;
-    height: 220px;
+    width: 155px;
+    height: 190px;
     object-fit: cover;
     border-radius: 12px;
   }
@@ -585,10 +586,29 @@ html[data-theme="dark"] .cta-banner {
 .professor-info {
   flex: 1;
 
-  h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; }
-  .name-local { font-weight: 400; font-size: 1rem; color: var(--text-muted); }
-  .professor-title { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.75rem; }
-  .professor-bio { font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem; }
+  h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.2rem; }
+  .name-local { font-weight: 400; font-size: 0.95rem; color: var(--text-muted); }
+  .professor-title { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
+  .professor-bio { font-size: 0.88rem; line-height: 1.65; margin-bottom: 0.75rem; }
+}
+
+.professor-icon-links {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  a {
+    font-size: 1rem;
+    color: var(--text-muted);
+    transition: color 0.2s;
+    padding: 0.15rem;
+    &:hover { color: var(--secondary); }
+  }
+  @media (max-width: 640px) {
+    gap: 0;
+    justify-content: space-between;
+    width: 100%;
+    a { padding: 0.4rem; }
+  }
 }
 
 .professor-tags {
@@ -600,16 +620,16 @@ html[data-theme="dark"] .cta-banner {
 
 .professor-links {
   display: flex;
-  gap: 0.75rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
 
   a {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    font-size: 0.85rem;
+    gap: 0.35rem;
+    font-size: 0.8rem;
     color: var(--secondary);
-    padding: 0.35rem 0.85rem;
+    padding: 0.25rem 0.7rem;
     border-radius: 6px;
     border: 1px solid rgba($secondary, 0.2);
     transition: all 0.2s;
@@ -621,7 +641,7 @@ html[data-theme="dark"] .cta-banner {
 // ─── Students ───────────────────────────────────────────────────────────────
 
 .category-title {
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
@@ -666,6 +686,13 @@ html[data-theme="dark"] .cta-banner {
   flex-shrink: 0;
 
   .initials { font-size: 1rem; font-weight: 600; color: var(--secondary); }
+
+  .student-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 }
 
 .student-info {
@@ -674,6 +701,7 @@ html[data-theme="dark"] .cta-banner {
 
   .student-name { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.15rem; }
   .student-meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+  .student-bio { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.4rem; line-height: 1.4; }
   .student-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
   .student-note { font-size: 0.78rem; color: var(--text-muted); font-style: italic; margin-top: 0.3rem; }
 
@@ -798,6 +826,27 @@ html[data-theme="dark"] .cta-banner {
   .topic-header { flex-direction: column; text-align: center; align-items: center; gap: 0.75rem; }
   .course-meta { gap: 0.5rem; justify-content: center; }
   .course-card { padding: 1.5rem; }
+  .footer-links { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .professor-info h2 { font-size: 1.25rem; }
+}
+
+// ─── Small Phones ──────────────────────────────────────────────────────────
+@media (max-width: 480px) {
+  body { -webkit-hyphens: auto; hyphens: auto; }
+  .hero { padding: 3rem 0.75rem; }
+  .section { padding: 2rem 0.75rem; }
+  .page-content { padding: 0 0.75rem 2rem; }
+  .page-header { padding: 2rem 0.75rem 1rem; }
+  .header-inner { padding: 0.6rem 0.75rem; }
+  .professor-card { padding: 1.25rem; gap: 1rem; }
+  .professor-photo img { width: 140px; height: 170px; }
+  .professor-info h2 { font-size: 1.1rem; }
+  .professor-info .name-local { font-size: 0.8rem; display: block; }
+  .professor-info .professor-title { font-size: 0.88rem; }
+  .student-card { padding: 1rem; gap: 0.75rem; }
+  .footer-links { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -1059,7 +1108,7 @@ html[data-theme="dark"] {
 }
 
 .course-title {
-  font-size: 1.35rem;
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
   font-weight: 700;
   margin-bottom: 0.75rem;
   letter-spacing: -0.01em;
@@ -1135,7 +1184,35 @@ html[data-theme="dark"] .topic-tag {
 // ─── Professor Page Variant ─────────────────────────────────────────────────
 // On People page: no bio (compact), on Home: full bio
 .professor-card--page {
+  padding: 1.25rem 1.5rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
   .professor-bio { display: none; }
+  .professor-photo img { width: 140px; height: 170px; }
+  .professor-info {
+    h2 { font-size: 1.35rem; margin-bottom: 0.1rem; }
+    .name-local { font-size: 0.9rem; }
+    .professor-title { font-size: 0.88rem; margin-bottom: 0.5rem; }
+  }
+  .professor-tags { margin-bottom: 0.4rem; gap: 0.3rem; }
+  .professor-icon-links {
+    gap: 0.6rem;
+    a { font-size: 0.9rem; }
+  }
+
+  @media (max-width: 640px) {
+    .professor-info .professor-title {
+      font-size: 0.78rem;
+      div { text-wrap: balance; }
+    }
+  }
+}
+
+.professor-office {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+  i { margin-right: 0.25rem; }
 }
 
 // ─── Single-Column Student List ─────────────────────────────────────────────
@@ -1336,7 +1413,7 @@ html[data-theme="dark"] .profile-photo {
 
 .profile-links {
   display: flex;
-  gap: 0.75rem;
+  gap: 0.4rem;
   margin-top: 0.6rem;
 
   a {

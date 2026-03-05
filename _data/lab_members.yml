@@ -26,6 +26,12 @@ professor:
     homepage: "https://j1yoo.github.io"
     email: "jaewon.yoo@iss.nthu.edu.tw"
     scholar: "https://scholar.google.com/citations?user=6vinVNUAAAAJ"
+    github: "https://github.com/j1yoo"
+    researchgate: "https://www.researchgate.net/profile/Jaewon-Yoo-3/"
+    ssrn: "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=5182752"
+    arxiv: "https://arxiv.org/a/yoo_j_5"
+    linkedin: "https://www.linkedin.com/in/jaewon-yoo"
+    x: "https://twitter.com/j1yoo4"
     office: "TSMC Building, Office 828B"
   address:
     line1: "Office 828B, TSMC Building"
@@ -52,13 +58,16 @@ current_students:
     degree: "M.S."
     year: "2025-"
     program: "iMBA, NTHU"
-    photo: ""
+    photo: "mave_alexander.jpg"
+    bio: "As a Tax Officer from Saint Lucia, Mave is interested in how regional cultural contexts influence housing markets and organizational behaviour. She aims to produce rigorous quantitative research that strengthens evidence-based policymaking and deepens understanding of Caribbean economic structures."
+    linkedin: "https://www.linkedin.com/in/mave-alexander-518406367"
+    github: "https://github.com/MaveKimaraAlexander"
     research_tags: []
 
   - name: "Young Shin"
     degree: "Undergraduate RA"
     year: "2025-"
-    program: "College of EECS, NTHU"
+    program: "College of Electrical Engineering and Computer Science, NTHU"
     photo: ""
     research_tags: []
 
@@ -68,6 +77,7 @@ alumni:
     year: "2023-25"
     program: "Institute of Information Management, NYCU"
     photo: ""
+    tag: "Counterfactual Explanation"
     thesis: "Structure-Aware Robust Counterfactual Explanations via Conditional Gaussian Network Classifiers"
     thesis_url: "https://thesis.lib.nycu.edu.tw/items/afad6b16-1a74-4d3b-9af9-6d0546212a73"
     note: "Co-advised with Po-An Chen (NYCU)"
@@ -78,6 +88,7 @@ alumni:
     year: "2023-25"
     program: "Institute of Service Science, NTHU"
     photo: "pearl_lin.jpeg"
+    tag: "Policy Evaluation"
     thesis: "Effects of Paid Family Leave Policy on Firm Risk-Taking: A Quasi-Experimental Approach"
     thesis_url: "https://etd.lib.nthu.edu.tw/detail/c25e999348b0136aceab80dc25d730b2/"
 
@@ -86,6 +97,7 @@ alumni:
     year: "2023-25"
     program: "iMBA, NTHU"
     photo: ""
+    tag: "Platform Economics"
     thesis: "Unintended Consequences of Sales Ban: Empirical Analysis of the Book Retailing Industry"
     thesis_url: "https://etd.lib.nthu.edu.tw/detail/12ad09d982483923e9982de20ed0191c/"
 
@@ -94,6 +106,7 @@ alumni:
     year: "2023-25"
     program: "iMBA, NTHU"
     photo: ""
+    tag: "Platform Design"
     thesis: "When Algorithms Go Silent: Effects of Trending Topic Suspension on Political Information Consumption"
     thesis_url: "https://etd.lib.nthu.edu.tw/detail/252b0089ebe61c7618327accc66ba0ec/"
 
@@ -102,6 +115,7 @@ alumni:
     year: "2022-24"
     program: "Institute of Service Science, NTHU"
     photo: ""
+    tag: "Consumer Behavior"
     thesis: "Influence of Message Framing on Consumer Adoption of AI Services: Evidence from the Financial Sector"
     thesis_url: "https://etd.lib.nthu.edu.tw/detail/668262f8f04ca01c4f1b938a1a3b0412/"
 
@@ -110,6 +124,7 @@ alumni:
     year: "2022-24"
     program: "Institute of Service Science, NTHU"
     photo: ""
+    tag: "Policy Evaluation"
     thesis: "Examining the Impact of Paid Family and Medical Leave Policy on Firm Innovation: Evidence from Quasi-Experiments"
     thesis_url: "https://etd.lib.nthu.edu.tw/detail/0570df8a7951673cc90d245c94b48a0f/"
 
@@ -118,6 +133,7 @@ alumni:
     year: "2021-23"
     program: "iMBA, NTHU"
     photo: "daniel_gonzalez.jpg"
+    tag: "Consumer Behavior"
     thesis: "Evaluating Risk-Reducing Incentives to Influence Consumers' Purchase Decision of Private-Label Products"
     thesis_url: "https://etd.lib.nthu.edu.tw/detail/eb793427d2f5d99a24007a84ca1fd4e9/"
 
@@ -126,5 +142,6 @@ alumni:
     year: "2021-23"
     program: "Institute of Service Science, NTHU"
     photo: "jean_liu.jpg"
+    tag: "Corporate Strategy"
     thesis: "Does CSR Visibility Lead to Superior Financial Performance? Evidence from a Regression Discontinuity Design"
     thesis_url: "https://etd.lib.nthu.edu.tw/detail/3debccdc9b57b7596044c3c05ffe1b1b/"

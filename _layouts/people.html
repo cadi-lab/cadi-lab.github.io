@@ -23,28 +23,49 @@ layout: default
     <div class="professor-info">
       <h2>{{ prof.name }} <span class="name-local">({{ prof.name_local }}; {{ prof.name_alt }})</span></h2>
       <div class="professor-title">
-        {{ prof.title }}, {{ prof.department }}<br>
-        {{ prof.college }}, {{ prof.university }}
+        <div>{{ prof.title }}, {{ prof.department }}</div>
+        <div>{{ prof.college }}, {{ prof.university }}</div>
       </div>
       <div class="professor-tags">
-        {% for interest in prof.research_interests %}
-        <span class="tag">{{ interest }}</span>
-        {% endfor %}
+        <span class="tag">Causal Inference</span>
+        <span class="tag">Platform Design</span>
+        <span class="tag">Policy Evaluation</span>
+        <span class="tag">Explainable AI</span>
       </div>
-      <div class="professor-links">
-        {% if prof.links.homepage %}
-        <a href="{{ prof.links.homepage }}" target="_blank"><i class="fa-solid fa-globe"></i> Homepage</a>
-        {% endif %}
-        {% if prof.links.email %}
-        <a href="mailto:{{ prof.links.email }}"><i class="fa-solid fa-envelope"></i> Email</a>
+      <div class="professor-icon-links">
+        {% if prof.links.github %}
+        <a href="{{ prof.links.github }}" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
         {% endif %}
         {% if prof.links.scholar %}
-        <a href="{{ prof.links.scholar }}" target="_blank"><i class="fa-brands fa-google-scholar"></i> Scholar</a>
+        <a href="{{ prof.links.scholar }}" target="_blank" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
         {% endif %}
-        {% if prof.links.office %}
-        <a href="#"><i class="fa-solid fa-location-dot"></i> {{ prof.links.office }}</a>
+        {% if prof.links.researchgate %}
+        <a href="{{ prof.links.researchgate }}" target="_blank" title="ResearchGate"><i class="ai ai-researchgate"></i></a>
+        {% endif %}
+        {% if prof.links.ssrn %}
+        <a href="{{ prof.links.ssrn }}" target="_blank" title="SSRN"><i class="ai ai-ssrn"></i></a>
+        {% endif %}
+        {% if prof.links.arxiv %}
+        <a href="{{ prof.links.arxiv }}" target="_blank" title="arXiv"><i class="ai ai-arxiv"></i></a>
+        {% endif %}
+        {% if prof.links.linkedin %}
+        <a href="{{ prof.links.linkedin }}" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        {% endif %}
+        {% if prof.links.x %}
+        <a href="{{ prof.links.x }}" target="_blank" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+        {% endif %}
+        {% if prof.links.email %}
+        <a href="mailto:{{ prof.links.email }}" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        {% endif %}
+        {% if prof.links.homepage %}
+        <a href="{{ prof.links.homepage }}" target="_blank" title="Homepage"><i class="fa-solid fa-globe"></i></a>
         {% endif %}
       </div>
+      {% if prof.links.office %}
+      <div class="professor-office">
+        <i class="fa-solid fa-location-dot"></i> {{ prof.links.office }}
+      </div>
+      {% endif %}
     </div>
   </div>
 
@@ -140,6 +161,11 @@ layout: default
             <div class="profile-meta">
               <span><i class="fa-solid fa-graduation-cap"></i> {{ alum.degree }}, {{ alum.program }}</span>
             </div>
+            {% if alum.tag %}
+            <div class="profile-tags">
+              <span class="tag-sm">{{ alum.tag }}</span>
+            </div>
+            {% endif %}
             {% if alum.thesis %}
             <div class="profile-thesis">
               <i class="fa-solid fa-file-lines"></i>
