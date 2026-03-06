@@ -93,6 +93,74 @@
   });
 
   /* -------------------------------------------------- */
+  /*  Footer brand typing effect                        */
+  /* -------------------------------------------------- */
+  (function initFooterTyping() {
+    var brand = document.getElementById('footer-brand');
+    if (!brand) return;
+
+    var TEXT      = 'CADI Lab';
+    var SPLIT     = 4;               // "CADI" = first 4 chars
+    var TYPE_MS   = 120;
+    var DELETE_MS  = 60;
+    var PAUSE_FULL = 3000;           // pause after fully typed
+    var PAUSE_EMPTY = 500;           // pause after fully deleted
+    var started   = false;
+
+    function buildHTML(len) {
+      if (len === 0) return '';
+      var str = TEXT.substring(0, len);
+      if (len <= SPLIT) {
+        return '<span class="logo-mark">' + str + '</span>';
+      }
+      return '<span class="logo-mark">' + TEXT.substring(0, SPLIT) + '</span> ' +
+             '<span class="logo-text">' + str.substring(SPLIT + 1) + '</span>';
+    }
+
+    function run() {
+      // Replace static content with typed container + cursor
+      brand.innerHTML = '<span id="footer-typed"></span><span class="footer-cursor"></span>';
+      var el = document.getElementById('footer-typed');
+      var i = 0;
+      var deleting = false;
+
+      function tick() {
+        if (!deleting) {
+          if (i <= TEXT.length) {
+            el.innerHTML = buildHTML(i);
+            i++;
+            setTimeout(tick, TYPE_MS);
+          } else {
+            setTimeout(function () { deleting = true; tick(); }, PAUSE_FULL);
+          }
+        } else {
+          if (i > 0) {
+            i--;
+            el.innerHTML = buildHTML(i);
+            setTimeout(tick, DELETE_MS);
+          } else {
+            setTimeout(function () { deleting = false; tick(); }, PAUSE_EMPTY);
+          }
+        }
+      }
+      tick();
+    }
+
+    // Start only when footer scrolls into view
+    if ('IntersectionObserver' in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting && !started) {
+          started = true;
+          run();
+        }
+      }, { threshold: 0.3 });
+      obs.observe(brand);
+    } else {
+      run(); // fallback for old browsers
+    }
+  })();
+
+  /* -------------------------------------------------- */
   /*  Header shrink on scroll                           */
   /* -------------------------------------------------- */
   var header = document.querySelector('.site-header');

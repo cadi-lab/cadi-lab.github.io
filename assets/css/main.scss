@@ -766,6 +766,17 @@ html[data-theme="dark"] .cta-banner {
   .logo-text { font-weight: 500; }
 }
 
+.footer-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--secondary);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: footerBlink 1s step-end infinite;
+}
+@keyframes footerBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
 .footer-info {
   p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem; }
   .footer-affil { font-size: 0.85rem; a { color: var(--text-muted); &:hover { color: var(--secondary); } } }
