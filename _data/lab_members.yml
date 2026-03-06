@@ -51,7 +51,10 @@ current_students:
     degree: "M.S."
     year: "2025-"
     program: "iMBA, NTHU"
-    photo: ""
+    photo: "john_loui_santiago.jpg"
+    bio: "John Loui Santiago is a graduate student whose research focuses on labor policy within the broader intersection of economics, law, and public policy. With experience helping manage a small business, he is interested in how organizations respond to regulatory and economic environments."
+    linkedin: "https://www.linkedin.com/in/johnlouisantiago/"
+    github: "https://github.com/johnlouisantiago"
     research_tags: []
 
   - name: "Mave Kimara Alexander"

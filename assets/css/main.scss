@@ -1,6 +1,7 @@
 ---
 ---
 @charset "utf-8";
+@use "sass:color";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // CADI Lab — Standalone Stylesheet
@@ -265,7 +266,7 @@ html[data-theme="dark"] .hero {
   color: #fff;
 
   &:hover {
-    background: darken($secondary, 8%);
+    background: color.adjust($secondary, $lightness: -8%);
     color: #fff;
     box-shadow: 0 4px 12px rgba($secondary, 0.3);
   }
@@ -956,9 +957,9 @@ html[data-theme="dark"] .topic-header > i {
 
 html[data-theme="dark"] .paper-status-badge {
   &.published { background: rgba(#10b981, 0.2); color: #34d399; }
-  &.under-review { background: rgba($secondary, 0.2); color: lighten($secondary, 15%); }
+  &.under-review { background: rgba($secondary, 0.2); color: color.adjust($secondary, $lightness: 15%); }
   &.revise--resubmit, &.revise-resubmit, &.revision-invited { background: rgba(#f59e0b, 0.2); color: #fbbf24; }
-  &.working-paper { background: rgba($accent, 0.2); color: lighten($accent, 15%); }
+  &.working-paper { background: rgba($accent, 0.2); color: color.adjust($accent, $lightness: 15%); }
   &.work-in-progress { background: rgba(#8b5cf6, 0.2); color: #a78bfa; }
   &.thesis { background: rgba(#9ca3af, 0.2); color: #9ca3af; }
 }

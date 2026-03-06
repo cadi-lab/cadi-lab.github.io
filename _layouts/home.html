@@ -113,8 +113,9 @@ layout: default
           <span class="initials">{{ first_char }}{{ last_char }}</span>
         </div>
         <div class="student-info">
-          <div class="student-name">
-            {{ student.name }}
+          <div class="student-name">{{ student.name }}</div>
+          {% if student.linkedin or student.github %}
+          <div class="student-links">
             {% if student.linkedin %}
             <a href="{{ student.linkedin }}" target="_blank" class="gh-link" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
             {% endif %}
@@ -122,6 +123,7 @@ layout: default
             <a href="{{ student.github }}" target="_blank" class="gh-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
             {% endif %}
           </div>
+          {% endif %}
           <div class="student-meta">{{ student.degree }} &middot; {{ student.program }} &middot; {{ student.year }}</div>
           {% if student.research_tags.size > 0 %}
           <div class="student-tags">
