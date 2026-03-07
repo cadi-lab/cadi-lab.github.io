@@ -45,6 +45,9 @@ current_students:
     year: "2026-"
     program: "Institute of Service Science, NTHU"
     photo: ""
+    bio: "Keri is a graduate student in Service Science with nearly four years of experience as a marketing specialist. Drawing from her background, she is interested in applying causal inference to understand how marketing strategies and institutional changes influence firm behavior."
+    linkedin: "https://www.linkedin.com/in/ting-wen-liu-5289971b0"
+    github: "https://github.com/keri0502"
     research_tags: []
 
   - name: "John Loui Santiago"
