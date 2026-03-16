@@ -10,6 +10,7 @@
   gtag('js', new Date());
   gtag('config', '{{ site.google_analytics }}');
 </script>
+<script defer src="{{ '/assets/js/enhanced-tracking.js' | relative_url }}"></script>
 {% endif %}
 <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description" content="{{ page.description | default: site.description | strip_html | truncatewords: 50 }}">
