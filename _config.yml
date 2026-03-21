@@ -4,8 +4,10 @@
 
 title: CADI Lab
 description: >-
-  Causal Analysis for Digital Interventions Lab at
-  National Tsing Hua University, College of Technology Management.
+  CADI Lab (Causal Analysis for Digital Interventions) at National Tsing Hua University
+  investigates how platform and technology design choices shape user behavior and market
+  outcomes using causal machine learning, field experiments, and quasi-experimental methods.
+keywords: causal inference, digital platforms, field experiments, RCT, difference-in-differences, regression discontinuity, platform economics, causal machine learning, NTHU, research lab
 url: "https://cadi-lab.github.io"
 
 # Google Analytics
@@ -43,8 +45,6 @@ defaults:
 
 # SEO / Social sharing
 image: /assets/img/og-image.png
-twitter:
-  card: summary_large_image
 
 # Lab-specific
 pi_homepage: "https://j1yoo.github.io"

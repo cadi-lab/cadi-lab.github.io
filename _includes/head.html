@@ -35,5 +35,32 @@
 <!-- Site CSS -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
+<!-- CADI Lab Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchOrganization",
+  "name": "CADI Lab",
+  "alternateName": "Causal Analysis for Digital Interventions Lab",
+  "url": "https://cadi-lab.github.io",
+  "description": "CADI Lab at National Tsing Hua University investigates how platform and technology design choices shape user behavior and market outcomes using causal machine learning, field experiments, and quasi-experimental methods.",
+  "parentOrganization": {
+    "@type": "CollegeOrUniversity",
+    "name": "National Tsing Hua University",
+    "url": "https://www.nthu.edu.tw",
+    "department": {
+      "@type": "Organization",
+      "name": "Institute of Service Science, College of Technology Management"
+    }
+  },
+  "member": {
+    "@type": "Person",
+    "name": "Jaewon Yoo",
+    "jobTitle": "Assistant Professor",
+    "url": "https://j1yoo.github.io"
+  },
+  "knowsAbout": ["Causal Inference", "Platform Economics", "Field Experiments", "Quasi-Experimental Methods", "Causal Machine Learning", "Digital Markets"]
+}
+</script>
 {% seo %}
 {% feed_meta %}
