@@ -3,6 +3,7 @@
 # ──────────────────────────────────────────────────────────────────────────────
 
 title: CADI Lab
+icon: favicon.svg # the emoji or image name in /assets/img/ used as the favicon
 description: >-
   CADI Lab (Causal Analysis for Digital Interventions) at National Tsing Hua University
   investigates how platform and technology design choices shape user behavior and market
