@@ -44,7 +44,8 @@ current_students:
     degree: "M.S."
     year: "2026-"
     program: "Institute of Service Science, NTHU"
-    photo: ""
+    photo: "keri_liu.jpg"
+    photo_position: "center 30%"
     bio: "Keri is a graduate student in Service Science with nearly four years of experience as a marketing specialist. Drawing from her background, she is interested in applying causal inference to understand how marketing strategies and institutional changes influence firm behavior."
     linkedin: "https://www.linkedin.com/in/ting-wen-liu-5289971b0"
     github: "https://github.com/keri0502"
@@ -74,7 +75,8 @@ current_students:
     degree: "Undergraduate RA"
     year: "2025-"
     program: "College of Electrical Engineering and Computer Science, NTHU"
-    photo: ""
+    photo: "young_shin.jpg"
+    bio: "Young is an undergraduate research assistant interested in the intersection of computer science, economics, and marketing analytics. Drawing on previous customer-facing experience at Samsung and Apple, he is especially interested in how data and technology can help us better understand user behavior and decision-making."
     research_tags: []
 
 alumni:

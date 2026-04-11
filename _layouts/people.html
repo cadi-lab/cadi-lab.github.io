@@ -80,7 +80,7 @@ layout: default
     <div class="people-profile-card people-profile-card--wide">
       <div class="profile-photo profile-photo--lg">
         {% if student.photo != "" and student.photo %}
-        <img src="{{ '/assets/img/' | append: student.photo | relative_url }}" alt="{{ student.name }}" class="photo-clickable" data-full="{{ '/assets/img/' | append: student.photo | relative_url }}">
+        <img src="{{ '/assets/img/' | append: student.photo | relative_url }}" alt="{{ student.name }}" class="photo-clickable" data-full="{{ '/assets/img/' | append: student.photo | relative_url }}"{% if student.photo_position %} style="object-position: {{ student.photo_position }}"{% endif %}>
         {% else %}
         {% assign name_parts = student.name | split: ' ' %}
         {% assign first_char = name_parts[0] | slice: 0 %}
