@@ -6,25 +6,12 @@ areas:
     icon: "fa-solid fa-store"
     description: "How digital platform architectures — comment systems, ad formats, payment methods, and recommendation engines — shape consumer decisions and market outcomes."
     papers:
-      - title: "Comment Sections and News Consumption: Evidence of Complementarity from Platform Self-Regulation"
-        authors: "Park, H.M., <strong>Yoo, J.*</strong>, Kim, M."
-        status: "Under review"
-        venue: "Information Systems Research"
-        venue_note: "UTD24, FT50"
-        links: {}
-
       - title: "Interactive Blind Lead-In Ads and Purchase Conversion: The Roles of Completion and Creative Design Features"
         authors: "Yoon, S., <strong>Yoo, J.*</strong>, Kim, M., Kim, W., Lee, M.S."
         status: "Revise & Resubmit"
         venue: "Journal of Interactive Marketing"
         venue_note: "SSCI"
         links: {}
-
-      - title: "Helping Hands to Bear the Burden of Choice: Recommendations from Similar, but Not Close, Others Reduce Choice Difficulty"
-        authors: "<strong>Yoo, J.</strong>, Kim, W.*, Ackerman, J."
-        status: "Revision invited"
-        venue: "Journal of Marketing"
-        venue_note: "UTD24, FT50"
 
       - title: "Why Do Direct-to-Physician Promotions by Pharmaceutical Firms Increase Over Time? Evidence from 464 Drugs"
         authors: "Nam, S., Kim, M., <strong>Yoo, J.*</strong>"
@@ -34,6 +21,14 @@ areas:
         links:
           video: "https://www.youtube.com/watch?v=P-ymLIIJuoI"
 
+      - title: "Helping Hands to Bear the Burden of Choice: Recommendations from Similar, but Not Close, Others Reduce Choice Difficulty"
+        authors: "<strong>Yoo, J.</strong>, Kim, W.*, Ackerman, J."
+        status: "Revision invited"
+        venue: "Journal of Marketing"
+        venue_note: "UTD24, FT50"
+
+      - title: "[Title and authors withheld; under blind review]"
+        status: "Under review"
       - title: "Navigating the New Retail Landscape: Mobile Scan-and-Go and the Impact of Mobile Payment Adoption"
         authors: "<strong>Yoo, J.</strong>, Chen, Y., Kim, M., Kim, W."
         status: "Working Paper"
