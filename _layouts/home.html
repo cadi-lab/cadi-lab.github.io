@@ -96,14 +96,14 @@ layout: default
       </div>
     </div>
 
-    <!-- Current Students -->
-    {% assign students = site.data.lab_members.current_students %}
-    {% if students.size > 0 %}
+    <!-- Current Members -->
+    {% assign members = site.data.lab_members.current_members %}
+    {% if members.size > 0 %}
     <h2 class="category-title">
-      Current Students <span class="count">({{ students.size }})</span>
+      Current Members <span class="count">({{ members.size }})</span>
     </h2>
     <div class="students-grid">
-      {% for student in students %}
+      {% for student in members %}
       <div class="student-card">
         <div class="student-avatar">
           {% assign name_parts = student.name | split: ' ' %}

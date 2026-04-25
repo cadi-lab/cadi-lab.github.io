@@ -39,7 +39,7 @@ professor:
     line3: "101, Kuang-Fu Rd., Sec. 2"
     line4: "Hsinchu, Taiwan 300"
 
-current_students:
+current_members:
   - name: "Ting-Wen (Keri) Liu"
     degree: "M.S."
     year: "2026-"

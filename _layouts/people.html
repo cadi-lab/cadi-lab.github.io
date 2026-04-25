@@ -69,14 +69,14 @@ layout: default
     </div>
   </div>
 
-  <!-- ═══ Current Students — Single Column ═══ -->
-  {% assign students = site.data.lab_members.current_students %}
-  {% if students.size > 0 %}
+  <!-- ═══ Current Members — Single Column ═══ -->
+  {% assign members = site.data.lab_members.current_members %}
+  {% if members.size > 0 %}
   <h2 class="category-title">
-    Current Students <span class="count">({{ students.size }})</span>
+    Current Members <span class="count">({{ members.size }})</span>
   </h2>
   <div class="people-list">
-    {% for student in students %}
+    {% for student in members %}
     <div class="people-profile-card people-profile-card--wide">
       <div class="profile-photo profile-photo--lg">
         {% if student.photo != "" and student.photo %}
