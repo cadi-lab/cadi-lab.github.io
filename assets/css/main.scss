@@ -1654,7 +1654,6 @@ html[data-theme="dark"] .timeline-dot {
   background: var(--card-bg);
   border: 1px solid var(--border);
   transition: all 0.25s ease;
-  display: block;
 
   &:hover {
     transform: translateY(-3px);
@@ -1672,130 +1671,6 @@ html[data-theme="dark"] .timeline-dot {
     padding: 0.75rem 1rem;
     font-size: 0.85rem;
     color: var(--text-muted);
-  }
-}
-
-// ─── Gallery: category headers + event cards ────────────────────────────────
-
-.gallery-category {
-  font-size: 1.25rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
-  margin: 2.5rem 0 1rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--border);
-
-  &:first-of-type {
-    margin-top: 0.5rem;
-  }
-}
-
-.event-card {
-  display: block;
-  border-radius: 12px;
-  overflow: hidden;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  transition: all 0.25s ease;
-  text-decoration: none;
-  color: inherit;
-
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
-    text-decoration: none;
-    color: inherit;
-  }
-
-  img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-  }
-
-  .event-card-body {
-    padding: 1rem 1.1rem 1.1rem;
-  }
-
-  .event-card-title {
-    font-size: 1.05rem;
-    font-weight: 600;
-    line-height: 1.35;
-    margin: 0 0 0.5rem 0;
-    color: var(--text);
-  }
-
-  .event-card-desc {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: var(--text-muted);
-    margin: 0 0 0.6rem 0;
-  }
-
-  .event-card-date {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    opacity: 0.75;
-    margin: 0;
-  }
-}
-
-// ─── Gallery: event detail page ─────────────────────────────────────────────
-
-.gallery-event {
-  .gallery-event-back {
-    font-size: 0.9rem;
-    margin: 0.5rem 0 1.5rem 0;
-
-    a {
-      color: var(--text-muted);
-      text-decoration: none;
-
-      &:hover {
-        color: var(--accent);
-      }
-    }
-  }
-
-  .gallery-event-header {
-    margin-bottom: 1.5rem;
-
-    h1 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin: 0 0 0.4rem 0;
-      line-height: 1.25;
-    }
-  }
-
-  .gallery-event-date {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    margin: 0;
-  }
-
-  .gallery-event-body {
-    font-size: 0.98rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-
-    p {
-      margin: 0 0 0.6rem 0;
-    }
-  }
-
-  .gallery-event-photos {
-    margin: 1.5rem 0 0.5rem 0;
-  }
-
-  .gallery-event-caption {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    text-align: center;
-    margin: 0.5rem 0 2rem 0;
   }
 }
 

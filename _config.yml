@@ -31,11 +31,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# Collections
-collections:
-  gallery_events:
-    output: true
-    permalink: /gallery/:path/
+# Collections (optional for future use)
+# collections:
+#   publications:
+#     output: true
 
 # Defaults
 defaults:
@@ -44,11 +43,6 @@ defaults:
     values:
       layout: default
       image: /assets/img/og-image.png
-  - scope:
-      path: ""
-      type: gallery_events
-    values:
-      layout: gallery-event
 
 # SEO / Social sharing
 image: /assets/img/og-image.png
