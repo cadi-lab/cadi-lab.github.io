@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<div class="container page-content gallery-event">
+
+  <p class="gallery-event-back">
+    <a href="{{ '/gallery/' | relative_url }}">&larr; Back to gallery</a>
+  </p>
+
+  <header class="gallery-event-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.date %}
+      <p class="gallery-event-date">{{ page.date | date: "%B %-d, %Y" }}</p>
+    {% endif %}
+  </header>
+
+  <div class="gallery-event-body">
+    {{ content }}
+  </div>
+
+  {% assign event_slug = page.path | split: '/' | last | split: '.' | first %}
+  {% capture path_match %}gallery/{{ event_slug }}/{% endcapture %}
+  {% assign event_jpg = site.static_files | where_exp: "f", "f.path contains path_match" | where: "extname", ".jpg" %}
+  {% assign event_jpeg = site.static_files | where_exp: "f", "f.path contains path_match" | where: "extname", ".jpeg" %}
+  {% assign event_png = site.static_files | where_exp: "f", "f.path contains path_match" | where: "extname", ".png" %}
+  {% assign event_photos = event_jpg | concat: event_jpeg | concat: event_png | sort: "path" %}
+
+  {% if event_photos.size > 0 %}
+    <div class="gallery-grid gallery-event-photos">
+      {% for photo in event_photos %}
+        <a href="{{ photo.path | relative_url }}" target="_blank" rel="noopener" class="gallery-item">
+          <img src="{{ photo.path | relative_url }}" alt="{{ page.title }}" loading="lazy">
+        </a>
+      {% endfor %}
+    </div>
+    <p class="gallery-event-caption">Click any photo to open the full-resolution version in a new tab.</p>
+  {% endif %}
+
+  <p class="gallery-event-back">
+    <a href="{{ '/gallery/' | relative_url }}">&larr; Back to gallery</a>
+  </p>
+
+</div>
