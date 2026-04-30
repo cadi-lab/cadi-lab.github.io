@@ -78,9 +78,9 @@ layout: default
   <div class="people-list">
     {% for student in members %}
     <div class="people-profile-card people-profile-card--wide">
-      <div class="profile-photo profile-photo--lg">
+      <div class="profile-photo profile-photo--lg"{% if student.photo_bg %} style="background: {{ student.photo_bg }}"{% endif %}>
         {% if student.photo != "" and student.photo %}
-        <img src="{{ '/assets/img/' | append: student.photo | relative_url }}" alt="{{ student.name }}" class="photo-clickable" data-full="{{ '/assets/img/' | append: student.photo | relative_url }}"{% if student.photo_position %} style="object-position: {{ student.photo_position }}"{% endif %}>
+        <img src="{{ '/assets/img/' | append: student.photo | relative_url }}" alt="{{ student.name }}" class="photo-clickable" data-full="{{ '/assets/img/' | append: student.photo | relative_url }}"{% if student.photo_position or student.photo_scale %} style="{% if student.photo_position %}object-position: {{ student.photo_position }};{% endif %}{% if student.photo_scale %}transform: scale({{ student.photo_scale }});{% endif %}"{% endif %}>
         {% else %}
         {% assign name_parts = student.name | split: ' ' %}
         {% assign first_char = name_parts[0] | slice: 0 %}
@@ -147,7 +147,7 @@ layout: default
         <div class="people-profile-card people-profile-card--wide">
           <div class="profile-photo profile-photo--lg">
             {% if alum.photo != "" and alum.photo %}
-            <img src="{{ '/assets/img/' | append: alum.photo | relative_url }}" alt="{{ alum.name }}" class="photo-clickable" data-full="{{ '/assets/img/' | append: alum.photo | relative_url }}">
+            <img src="{{ '/assets/img/' | append: alum.photo | relative_url }}" alt="{{ alum.name }}" class="photo-clickable" data-full="{{ '/assets/img/' | append: alum.photo | relative_url }}"{% if alum.photo_position or alum.photo_scale %} style="{% if alum.photo_position %}object-position: {{ alum.photo_position }};{% endif %}{% if alum.photo_scale %}transform: scale({{ alum.photo_scale }});{% endif %}"{% endif %}>
             {% else %}
             {% assign name_parts = alum.name | split: ' ' %}
             {% assign first_char = name_parts[0] | slice: 0 %}

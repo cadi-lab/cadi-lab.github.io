@@ -86,6 +86,9 @@ current_members:
     year: "2025-"
     program: "College of Electrical Engineering and Computer Science, NTHU"
     photo: "young_shin.jpg"
+    photo_position: "center center"
+    photo_scale: 0.98
+    photo_bg: "white"
     bio: "Young is an undergraduate research assistant interested in the intersection of computer science, economics, and marketing analytics. Drawing on previous customer-facing experience at Samsung and Apple, he is especially interested in how data and technology can help us better understand user behavior and decision-making."
     research_tags: []
 
@@ -94,7 +97,9 @@ alumni:
     degree: "M.S."
     year: "2023-25"
     program: "Institute of Information Management, NYCU"
-    photo: ""
+    photo: "zhanyi_liao.jpg"
+    photo_scale: 1.4
+    photo_position: "center 30%"
     tag: "Counterfactual Explanation"
     thesis: "Structure-Aware Robust Counterfactual Explanations via Conditional Gaussian Network Classifiers"
     thesis_url: "https://thesis.lib.nycu.edu.tw/items/afad6b16-1a74-4d3b-9af9-6d0546212a73"
