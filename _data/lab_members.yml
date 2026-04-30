@@ -51,6 +51,16 @@ current_members:
     github: "https://github.com/keri0502"
     research_tags: []
 
+  - name: "Hsin-Yu (Joanna) Hsiao"
+    degree: "M.S."
+    year: "2026-"
+    program: "Institute of Service Science, NTHU"
+    photo: "joanna_hsiao.jpg"
+    bio: "Joanna Hsiao is a master's student with three years of industry experience in digital performance and market consumer trend analysis at market research and consulting company. Her research examines how predictive signals shape user behavior in online markets, with a focus on causal identification using observational data and experimental methods."
+    linkedin: "https://www.linkedin.com/in/joanna-hsiao-3145711b8/"
+    github: "https://github.com/hsiao30919"
+    research_tags: []
+
   - name: "John Loui Santiago"
     degree: "M.S."
     year: "2025-"
