@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var currentPath = window.location.pathname;
   var currentHost = window.location.hostname;
+  // NOTE: do NOT pass `page_location: currentPath` to gtag events. GA4 expects
+  // `page_location` to be a full URL; passing just a path strips the hostname
+  // and produces empty/NaN hostname rows in GA4 reports. GA4 auto-collects
+  // page_location from window.location.href when omitted, which is what we want.
 
   // ---------------------------------------------------------
   // 1. PDF Download Tracking
@@ -36,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
         file_name: fileName,
         file_url: this.href,
         file_type: isSyllabus ? 'syllabus' : isSlide ? 'slide' : 'paper',
-        page_location: currentPath,
       });
 
       // ECI 강의 슬라이드 별도 추적
@@ -44,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
         gtag('event', 'slide_download', {
           file_name: fileName,
           course: 'eci',
-          page_location: currentPath,
         });
       }
     });
@@ -60,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
           link_url: this.href,
           link_domain: this.hostname,
           link_text: this.textContent.trim().substring(0, 100),
-          page_location: currentPath,
         });
       });
     }
@@ -81,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function () {
       gtag('event', 'content_interest', {
         content_title: titleEl ? titleEl.textContent.trim().substring(0, 150) : 'unknown',
         content_type: contentType,
-        page_location: currentPath,
       });
     });
   });
@@ -102,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollFired[threshold] = true;
         gtag('event', 'scroll_depth', {
           depth_percentage: threshold,
-          page_location: currentPath,
           page_title: document.title,
         });
       }
@@ -116,7 +115,6 @@ document.addEventListener('DOMContentLoaded', function () {
     link.addEventListener('click', function () {
       gtag('event', 'cv_download', {
         file_url: this.href,
-        page_location: currentPath,
       });
     });
   });
@@ -128,7 +126,6 @@ document.addEventListener('DOMContentLoaded', function () {
     link.addEventListener('click', function () {
       gtag('event', 'contact_click', {
         contact_method: 'email',
-        page_location: currentPath,
         site: currentHost,
       });
     });
@@ -161,7 +158,6 @@ document.addEventListener('DOMContentLoaded', function () {
         timeFired[threshold] = true;
         gtag('event', 'time_on_page', {
           seconds: threshold,
-          page_location: currentPath,
           page_title: document.title,
         });
       }
@@ -192,7 +188,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (currentPath.includes('/join') || currentPath.includes('/people') || currentPath.includes('/contact')) {
       gtag('event', 'lab_interest', {
         interest_type: currentPath.includes('/join') ? 'recruitment' : currentPath.includes('/people') ? 'team_browse' : 'contact',
-        page_location: currentPath,
       });
     }
   }
