@@ -26,6 +26,7 @@ professor:
     homepage: "https://j1yoo.github.io"
     email: "jaewon.yoo@iss.nthu.edu.tw"
     scholar: "https://scholar.google.com/citations?user=6vinVNUAAAAJ"
+    orcid: "https://orcid.org/0000-0003-1582-0020"
     github: "https://github.com/j1yoo"
     researchgate: "https://www.researchgate.net/profile/Jaewon-Yoo-3/"
     ssrn: "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=5182752"
@@ -40,6 +41,13 @@ professor:
     line4: "Hsinchu, Taiwan 300"
 
 current_members:
+  - name: "Anh (Mint) Tran"
+    degree: "Incoming PhD Student"
+    year: "2026-"
+    program: "Institute of Service Science, NTHU"
+    photo: ""
+    research_tags: []
+
   - name: "Ting-Wen (Keri) Liu"
     degree: "M.S."
     year: "2026-"

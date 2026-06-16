@@ -71,6 +71,9 @@ layout: default
           {% if prof.links.scholar %}
           <a href="{{ prof.links.scholar }}" target="_blank" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
           {% endif %}
+          {% if prof.links.orcid %}
+          <a href="{{ prof.links.orcid }}" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>
+          {% endif %}
           {% if prof.links.researchgate %}
           <a href="{{ prof.links.researchgate }}" target="_blank" title="ResearchGate"><i class="ai ai-researchgate"></i></a>
           {% endif %}
