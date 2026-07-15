@@ -63,10 +63,10 @@
     }
   }
 
-  // Initialise: localStorage > system preference > dark fallback
+  // Initialise: localStorage > always dark default
   var saved = localStorage.getItem(THEME_KEY);
   if (!saved) {
-    saved = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    saved = 'dark';
   }
   applyTheme(saved);
 

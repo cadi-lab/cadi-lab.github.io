@@ -178,26 +178,101 @@ html:not([data-theme="dark"]) .site-header {
 // ─── Hero ───────────────────────────────────────────────────────────────────
 
 .hero {
-  background: linear-gradient(135deg, $primary 0%, $primary-light 50%, $accent 100%);
   color: #fff;
   padding: 6rem 1.5rem 5rem;
   text-align: center;
   position: relative;
   overflow: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 20% 50%, rgba(255,255,255,0.05) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 40%);
-    pointer-events: none;
-  }
+  // Light mode: day sky
+  background: linear-gradient(180deg, #3a7dc8 0%, #5a9ae0 25%, #7ab4f0 50%, #a0cef7 75%, #c8e2fb 100%);
 }
 
 html[data-theme="dark"] .hero {
-  background: linear-gradient(135deg, #0f1b2d 0%, #1a2744 50%, #0c4a5e 100%);
+  // Dark mode: night sky
+  background: linear-gradient(180deg, #050d1a 0%, #0a1628 40%, #152d48 100%);
+}
+
+// ─── Hero sky elements ──────────────────────────────────────────────────────
+
+// Particles container (dark mode stars)
+#particles-hero {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+html[data-theme="dark"] #particles-hero { opacity: 1; }
+html:not([data-theme="dark"]) #particles-hero { opacity: 0; }
+
+// Clouds (light mode only)
+// Clouds removed for cleaner look
+
+// Buildings silhouette
+.hero-buildings {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 65px;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 65px;
+    clip-path: polygon(
+      0% 100%, 0% 55%,
+      3% 55%, 3% 40%, 5% 40%, 5% 55%,
+      8% 55%, 8% 35%, 9.5% 35%, 9.5% 25%, 11% 25%, 11% 35%, 12.5% 35%, 12.5% 55%,
+      16% 55%, 16% 45%, 18% 45%, 18% 30%, 20% 30%, 20% 45%, 22% 45%, 22% 55%,
+      26% 55%, 26% 50%, 28% 50%, 28% 40%, 29.5% 35%, 31% 40%, 31% 50%, 33% 50%, 33% 55%,
+      37% 55%, 37% 42%, 39% 42%, 39% 28%, 40.5% 22%, 42% 28%, 42% 42%, 44% 42%, 44% 55%,
+      48% 55%, 48% 45%, 50% 45%, 50% 55%,
+      54% 55%, 54% 38%, 56% 38%, 56% 55%,
+      60% 55%, 60% 48%, 62% 48%, 62% 32%, 64% 32%, 64% 48%, 66% 48%, 66% 55%,
+      70% 55%, 70% 42%, 72% 42%, 72% 55%,
+      76% 55%, 76% 50%, 78% 50%, 78% 35%, 79.5% 30%, 81% 35%, 81% 50%, 83% 50%, 83% 55%,
+      87% 55%, 87% 45%, 89% 45%, 89% 55%,
+      93% 55%, 93% 40%, 95% 40%, 95% 48%, 97% 48%, 97% 55%,
+      100% 55%, 100% 100%
+    );
+  }
+}
+
+html[data-theme="dark"] .hero-buildings::before {
+  background: linear-gradient(to top, #0a1220, #0f1b2d);
+}
+html:not([data-theme="dark"]) .hero-buildings::before {
+  background: linear-gradient(to top, #5a8cc0, #7aaad8);
+  opacity: 0.35;
+}
+
+// Light mode: navy text, no shadows
+html:not([data-theme="dark"]) .hero {
+  .hero-kicker {
+    color: #1a3a5c;
+    text-shadow: none;
+  }
+  .hero-title {
+    color: #0d2240;
+    text-shadow: none;
+  }
+  .hero-subtitle {
+    color: #2a4a6c;
+    text-shadow: none;
+  }
+  .hero-actions .btn {
+    color: #0d2240;
+    border-color: rgba(13,34,64,0.4);
+    text-shadow: none;
+    box-shadow: none;
+    &:hover { background: rgba(13,34,64,0.1); }
+  }
+}
+
+// Hide buildings on mobile
+@media (max-width: 768px) {
+  .hero-buildings { display: none; }
 }
 
 .hero-content {
