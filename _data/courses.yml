@@ -27,18 +27,16 @@ courses:
     icon: "fa-solid fa-flask"
 
   - id: pba
-    title: "Programming for Business Analytics"
-    code: "ISS4066 / ISS5066"
-    level: "Undergraduate / Graduate"
+    title: "Programming for Business Analytics (Undergraduate)"
+    code: "ISS4066"
+    level: "Undergraduate"
     series: "Skills"
-    semester: "Fall"
+    semester: "Fall 2026"
     time: "Monday, 14:20–17:20"
     location: "TSMC Building, Room R421"
     description: >
-      This course introduces the basics of programming using R for business applications.
-      It equips students with fundamental skills for robust business data analysis,
-      addressing both practical programming skills and conceptual understanding necessary
-      to apply data science effectively in business contexts.
+      An undergraduate introduction to data analysis with R for business: wrangling and
+      visualizing data, evaluating causal claims, linear regression, and quantifying uncertainty.
     topics:
       - "R Programming Fundamentals"
       - "Data Wrangling & Visualization"
@@ -46,5 +44,29 @@ courses:
       - "Statistical Uncertainty"
       - "Bootstrapping vs. CLT"
       - "Professional Workflow (R, RStudio, Git, GitHub)"
-    syllabus_url: "/assets/courses/pba/ISS4066_PBA_Undergrad_Syllabus_Fall_25.pdf"
+    syllabus_url: "/assets/courses/pba/ISS4066_PBA_Undergrad_Syllabus_Fall_26.pdf"
+    homepage_url: "/teaching/pba/"
+    icon: "fa-solid fa-code"
+
+  - id: pba-grad
+    title: "Programming for Business Analytics (Graduate)"
+    code: "ISS5066"
+    level: "Graduate"
+    series: "Skills"
+    semester: "Fall 2026"
+    time: "Thursday, 14:20–17:20"
+    location: "TSMC Building, Room R421"
+    description: >
+      A graduate course on empirical analysis with R: from data wrangling and visualization
+      to causal reasoning, regression, and uncertainty quantification, culminating in a
+      research-grade project that prepares students for Experiments and Causal Inference.
+    topics:
+      - "R Programming Fundamentals"
+      - "Data Wrangling & Visualization"
+      - "Causality, DAGs & Covariate Selection"
+      - "Regression & Prediction"
+      - "Statistical Uncertainty"
+      - "Professional Workflow (R, RStudio, Git, GitHub)"
+    syllabus_url: "/assets/courses/pba/ISS5066_PBA_Graduate_Syllabus_Fall_26.pdf"
+    homepage_url: "/teaching/pba-grad/"
     icon: "fa-solid fa-code"
