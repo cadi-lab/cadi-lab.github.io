@@ -4,57 +4,38 @@ layout: default
 
 <div class="page-header">
   <h1>{{ page.title }}</h1>
-  {% if page.description %}
-  <p>{{ page.description }}</p>
-  {% endif %}
+  {% if page.description %}<p>{{ page.description }}</p>{% endif %}
 </div>
 
 <div class="container page-content">
-
   {% assign research = site.data.research %}
 
+  <nav class="research-nav" aria-label="Research areas">
+    {% for area in research.areas %}<a href="#{{ area.id }}">{{ area.title | escape }}</a>{% endfor %}
+  </nav>
+  <p class="research-author-note">* Corresponding author</p>
+
   {% for area in research.areas %}
-  <section class="research-topic" id="{{ area.id }}">
+  <section class="research-topic" id="{{ area.id }}" aria-labelledby="{{ area.id }}-title">
+    {% if area.id == 'xai' %}<span id="causal" class="research-legacy-anchor" aria-hidden="true"></span>{% endif %}
     <div class="topic-header">
-      <i class="{{ area.icon }}"></i>
+      <i class="{{ area.icon }}" aria-hidden="true"></i>
       <div>
-        <h2>{{ area.title }}</h2>
-        <p class="topic-desc">{{ area.description }}</p>
+        <h2 id="{{ area.id }}-title">{{ area.title | escape }}</h2>
+        <p class="topic-desc">{{ area.description | escape }}</p>
       </div>
     </div>
-
     <div class="papers-list">
-      {% for paper in area.papers %}
-      <div class="paper-item">
-        {% assign status = site.data.research_statuses[paper.status] %}
-        <div class="paper-status-badge {{ status.class | default: paper.status | slugify }}">
-          {% if status.icon %}<i class="fa-solid {{ status.icon }}" aria-hidden="true"></i>{% endif %}
-          <span>{{ paper.status | escape }}</span>
-        </div>
-        <h3 class="paper-title">{{ paper.title }}</h3>
-        <div class="paper-authors">{{ paper.authors }}</div>
-        {% if paper.venue != "" and paper.venue %}
-        <div class="paper-venue">
-          <i class="fa-solid fa-book-open"></i> {{ paper.venue }}
-          {% if paper.venue_note %}<span class="venue-note">({{ paper.venue_note }})</span>{% endif %}
-        </div>
-        {% endif %}
-        {% if paper.award %}
-        <div class="paper-award"><i class="fa-solid fa-trophy"></i> {{ paper.award }}</div>
-        {% endif %}
-        {% if paper.links %}
-        <div class="paper-links">
-          {% if paper.links.html %}<a href="{{ paper.links.html }}" target="_blank"><i class="fa-solid fa-link"></i> Link</a>{% endif %}
-          {% if paper.links.ssrn %}<a href="{{ paper.links.ssrn }}" target="_blank"><i class="fa-solid fa-file-lines"></i> SSRN</a>{% endif %}
-          {% if paper.links.arxiv %}<a href="{{ paper.links.arxiv }}" target="_blank"><i class="fa-solid fa-file-lines"></i> arXiv</a>{% endif %}
-          {% if paper.links.video and paper.links.video != "" %}<a href="{{ paper.links.video }}" target="_blank"><i class="fa-solid fa-video"></i> Video</a>{% endif %}
-        </div>
-        {% endif %}
-      </div>
-      {% endfor %}
+      {% for paper in area.papers %}{% include research-paper.html paper=paper %}{% endfor %}
     </div>
   </section>
   {% endfor %}
-
+  {% if research.under_review.size > 0 %}
+  {% assign review_status = site.data.research_statuses['Under review'] %}
+  <p class="research-review-note">
+    <span class="paper-status-badge {{ review_status.class }}">{% if review_status.icon %}<i class="fa-solid {{ review_status.icon }}" aria-hidden="true"></i>{% endif %}Under review</span>
+    <span>{{ research.under_review.size }} additional manuscripts; titles and authors withheld during blind review.</span>
+  </p>
+  {% endif %}
 
 </div>

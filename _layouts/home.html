@@ -27,7 +27,7 @@ layout: default
         <div class="research-icon">
           <i class="{{ area.icon }}"></i>
         </div>
-        <h3>{{ area.title }}</h3>
+        <h3><a href="{{ '/research/' | relative_url }}#{{ area.id }}">{{ area.title }}</a></h3>
         <p>{{ area.description }}</p>
         {% if area.tags %}
         <div class="tag-list">

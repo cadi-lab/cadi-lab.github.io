@@ -6,8 +6,8 @@ title: CADI Lab
 icon: favicon.svg # the emoji or image name in /assets/img/ used as the favicon
 description: >-
   CADI Lab (Causal Analysis for Digital Interventions) at National Tsing Hua University
-  investigates how platform and technology design choices shape user behavior and market
-  outcomes using causal machine learning, field experiments, and quasi-experimental methods.
+  studies digital platforms and consumer behavior, causal inference and explainable AI,
+  and innovation and firm strategy.
 keywords: causal inference, digital platforms, field experiments, RCT, difference-in-differences, regression discontinuity, platform economics, causal machine learning, NTHU, research lab
 url: "https://cadi-lab.github.io"
 

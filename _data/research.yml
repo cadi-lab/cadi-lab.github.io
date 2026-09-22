@@ -1,49 +1,65 @@
-# CADI Lab Research — organized by topic
+# CADI Lab Research — stable output IDs, grouped by research topic.
+under_review:
+  - id: blind-review-1
+    title: "[Title and authors withheld; under blind review]"
+    status: "Under review"
+  - id: blind-review-2
+    title: "[Title and authors withheld; under blind review]"
+    status: "Under review"
 
 areas:
   - id: platform
-    title: "Platform Design & Consumer Behavior"
+    title: "Digital Platforms & Consumer Behavior"
     icon: "fa-solid fa-store"
-    description: "How digital platform architectures — comment systems, ad formats, payment methods, and recommendation engines — shape consumer decisions and market outcomes."
+    description: "How digital platforms, retail technologies, and other decision environments shape consumer behavior, choice, and market outcomes."
     papers:
-      - title: "Interactive Blind Lead-In Ads and Purchase Conversion: The Roles of Completion and Creative Design Features"
+      - id: jnm-bli
+        title: "Interactive Blind Lead-In Ads and Purchase Conversion: The Roles of Completion and Creative Design Features"
         authors: "Yoon, S., <strong>Yoo, J.*</strong>, Kim, M., Kim, W., Lee, M.S."
         status: "Accepted & Forthcoming"
         venue: "Journal of Interactive Marketing"
         venue_note: "SSCI"
+        presentations:
+          - "Darden-Cambridge Judge-HKU FBE Entrepreneurship and Innovation Research Conference"
+          - "NYU-Temple Conference on Digital, Mobile Marketing, and Social Media Analytics (by invitation only)"
+        grants:
+          - 'Principal investigator, National Science and Technology Council, Taiwan (NSTC), "Curiosity Evocation and Resolution in Ads: Empirical Investigation in Large-Scale Randomized Controlled Trials" (2022–2024)'
 
-      - title: "Why does pharmaceutical detailing increase over time? Indication expansion versus inter-firm competition"
-        authors: "Nam, S., Kim, M., <strong>Yoo, J.*</strong>"
-        status: "Revise & Resubmit"
-        venue: "Journal of Business Research"
-        venue_note: "SSCI"
+      - id: scan-and-go
+        title: "Navigating the New Retail Landscape: Mobile Scan-and-Go and the Impact of Mobile Payment Adoption"
+        authors: "<strong>Yoo, J.</strong>, Chen, Y., Kim, M., Kim, W."
+        status: "Working Paper"
         links:
-          video: "https://www.youtube.com/watch?v=P-ymLIIJuoI"
+          ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4947618"
+        award: "Best Paper Award, KMA Doctoral Dissertation Competition at The 1st Joint Conference on Distribution, Marketing, Advertising, and Consumer Behavior (DMAC)"
+        presentations:
+          - "The 11th Yale-MIT China India Consumer Insights Conference (doctoral student support from Yale School of Management)"
+          - "2022 Information Systems Research (ISR) Author Development Workshop"
+          - "The 3rd CEIBS Marketing Symposium"
+        grants:
+          - 'Principal investigator, National Science and Technology Council, Taiwan (NSTC), "Mobile Scan-and-Go and the Future of Offline Retail: How Reduced Transaction Costs Affect Consumer Behavior" (2023–2025)'
 
-      - title: "Helping Hands to Bear the Burden of Choice: Recommendations from Similar, but Not Close, Others Reduce Choice Difficulty"
+      - id: jm-choice
+        title: "Helping Hands to Bear the Burden of Choice: Recommendations from Similar, but Not Close, Others Reduce Choice Difficulty"
         authors: "<strong>Yoo, J.</strong>, Kim, W.*, Ackerman, J."
         status: "Revision invited"
         venue: "Journal of Marketing"
         venue_note: "UTD24, FT50"
 
-      - title: "[Title and authors withheld; under blind review]"
-        status: "Under review"
-      - title: "Navigating the New Retail Landscape: Mobile Scan-and-Go and the Impact of Mobile Payment Adoption"
-        authors: "<strong>Yoo, J.</strong>, Chen, Y., Kim, M., Kim, W."
-        status: "Working Paper"
-        venue: ""
-        links:
-          ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4947618"
-        award: "Best Paper Award, KMA Doctoral Dissertation Competition"
-
-      - title: "Exploring Apps with Mixed Ratings: Examining How Users Find Regulatory Fit in Making Purchase Decision"
+      - id: mixed-ratings
+        title: "Exploring Apps with Mixed Ratings: Examining How Users Find Regulatory Fit in Making Purchase Decision"
         authors: "Duron, E.A., Ray, S., <strong>Yoo, J.</strong>"
         status: "Working Paper"
-        venue: "2024 DIGIT Workshop at ICIS"
         links:
           html: "https://aisel.aisnet.org/digit2024/24/"
+        presentations:
+          - "ISR Paper Development Workshop at PACIS (2024, presented by Edgar A. Duron)"
+          - "TSWIM (2024, presented by Edgar A. Duron)"
+          - "DIGIT Workshop at ICIS (2024, presented by Edgar A. Duron)"
+          - "MIS Quarterly Author Workshop (2026, presented by Edgar A. Duron)"
 
-      - title: "Compromise Effect and Consideration Set Size in Consumer Decision-Making"
+      - id: compromise-effect
+        title: "Compromise Effect and Consideration Set Size in Consumer Decision-Making"
         authors: "<strong>Yoo, J.</strong>, Park, H., Kim, W.*"
         status: "Published"
         venue: "Applied Economics Letters, 25(8), 513–517"
@@ -52,87 +68,129 @@ areas:
           html: "https://www.tandfonline.com/doi/abs/10.1080/13504851.2017.1340567"
           video: "https://www.youtube.com/watch?v=y7mWsSaXpN4"
 
-      - title: "Unintended Consequences of Sales Ban: Empirical Analysis of the Book Retailing Industry"
-        authors: "Tedjasukmana, N., <strong>Yoo, J.*</strong>"
+      - id: mave-housing-thesis
+        title: "The Effects of Short-Term Rental Platforms on the Housing Market: Evidence from Saint Lucia Using a Bartik Shift-Share Instrumental Variable Approach"
+        authors: "Mave Kimara Alexander"
+        advisors:
+          - "<strong>Jaewon Yoo</strong>"
+        status: "Thesis"
+        venue: "M.S. Thesis, iMBA, NTHU"
+        year: 2026
+        links:
+          html: "https://etd.lib.nthu.edu.tw/detail/bb224b60753ae011c0a818548307c9df/"
+
+      - id: sales-ban-thesis
+        title: "Unintended Consequences of Sales Ban: Empirical Analysis of the Book Retailing Industry"
+        authors: "Natasha Carissa Tedjasukmana"
+        advisors:
+          - "<strong>Jaewon Yoo</strong>"
         status: "Thesis"
         venue: "M.S. Thesis, iMBA, NTHU"
         year: 2025
         links:
           html: "https://etd.lib.nthu.edu.tw/detail/12ad09d982483923e9982de20ed0191c/"
 
-      - title: "When Algorithms Go Silent: Effects of Trending Topic Suspension on Political Information Consumption"
-        authors: "Nestant, M., <strong>Yoo, J.*</strong>"
+      - id: trending-topic-thesis
+        title: "When Algorithms Go Silent: Effects of Trending Topic Suspension on Political Information Consumption"
+        authors: "Medjine Nestant"
+        advisors:
+          - "<strong>Jaewon Yoo</strong>"
         status: "Thesis"
         venue: "M.S. Thesis, iMBA, NTHU"
         year: 2025
         links:
           html: "https://etd.lib.nthu.edu.tw/detail/252b0089ebe61c7618327accc66ba0ec/"
 
-      - title: "Influence of Message Framing on Consumer Adoption of AI Services: Evidence from the Financial Sector"
-        authors: "Lin, S.-Y., <strong>Yoo, J.*</strong>"
+      - id: ai-adoption-thesis
+        title: "Influence of Message Framing on Consumer Adoption of AI Services: Evidence from the Financial Sector"
+        authors: "Sin-Yu Lin"
+        advisors:
+          - "<strong>Jaewon Yoo</strong>"
         status: "Thesis"
         venue: "M.S. Thesis, Institute of Service Science, NTHU"
         year: 2024
         links:
           html: "https://etd.lib.nthu.edu.tw/detail/668262f8f04ca01c4f1b938a1a3b0412/"
 
-      - title: "Evaluating Risk-Reducing Incentives to Influence Consumers' Purchase Decision of Private-Label Products"
-        authors: "Gonzalez de Leon, D.V., <strong>Yoo, J.*</strong>"
+      - id: private-label-thesis
+        title: "Evaluating Risk-Reducing Incentives to Influence Consumers' Purchase Decision of Private-Label Products"
+        authors: "Daniel Vinicio Gonzalez de Leon"
+        advisors:
+          - "<strong>Jaewon Yoo</strong>"
         status: "Thesis"
         venue: "M.S. Thesis, iMBA, NTHU"
         year: 2023
         links:
           html: "https://etd.lib.nthu.edu.tw/detail/eb793427d2f5d99a24007a84ca1fd4e9/"
 
-  - id: causal
-    title: "Causal Inference Methods"
-    icon: "fa-solid fa-magnifying-glass-chart"
-    description: "Developing and applying experimental and quasi-experimental methodologies — difference-in-differences, regression discontinuity, instrumental variables, and machine-learning-assisted causal identification."
-    papers:
-      - title: "Improving Causal Identification with Explainable AI-Assisted Confounder Discovery"
-        authors: "<strong>Yoo, J.</strong>"
-        status: "Work in Progress"
-        venue: ""
-
-      - title: "Can AI Dream Up a Control Group? Generating Synthetic Respondents to Reconstruct Untreated Potential Outcomes"
-        authors: "<strong>Yoo, J.</strong>"
-        status: "Work in Progress"
-        venue: ""
-
-      - title: "Does CSR Visibility Lead to Superior Financial Performance? Evidence from a Regression Discontinuity Design"
-        authors: "Liu, Y., <strong>Yoo, J.*</strong>"
-        status: "Thesis"
-        venue: "M.S. Thesis, Institute of Service Science, NTHU"
-        year: 2023
-        links:
-          html: "https://etd.lib.nthu.edu.tw/detail/3debccdc9b57b7596044c3c05ffe1b1b/"
-
   - id: xai
-    title: "Counterfactual Reasoning & Explainable AI"
+    title: "Causal Inference & Explainable AI"
     icon: "fa-solid fa-brain"
-    description: "Bridging causal inference and explainable AI through counterfactual reasoning — developing robust explanation methods and theoretical frameworks that connect the two fields."
+    description: "We distinguish counterfactual outcomes in causal inference from counterfactual explanations of machine-learning predictions, develop optimization methods for robust explanations, and explore AI-assisted causal analysis."
     papers:
-      - title: "Structure-Aware Robust Counterfactual Explanations via Conditional Gaussian Network Classifiers"
+      - id: robust-ce-wp
+        title: "Structure-Aware Robust Counterfactual Explanations via Conditional Gaussian Network Classifiers"
         authors: "Liao, Z.-Y., <strong>Yoo, J.</strong>, Yang, H.-T., Chen, P.-A."
         status: "Working Paper"
-        venue: ""
         links:
           arxiv: "https://arxiv.org/abs/2602.08021"
+        presentations:
+          - "CMCT (2026, presented by Zhan-Yi Liao)"
+          - "TSWIM (2026, presented by Po-An Chen)"
+        related:
+          - id: liao-thesis
+            label: "Related master's thesis"
 
-      - title: "From What Ifs to Insights: Counterfactuals in Causal Inference vs. Explainable AI"
+      - id: counterfactuals-ci-xai
+        title: "From What Ifs to Insights: Counterfactuals in Causal Inference vs. Explainable AI"
         authors: "Shmueli, G., Martens, D., <strong>Yoo, J.</strong>, Greene, T."
         status: "Working Paper"
-        venue: ""
         links:
           arxiv: "https://arxiv.org/abs/2505.13324"
 
+      - id: liao-thesis
+        title: "Structure-Aware Robust Counterfactual Explanations via Conditional Gaussian Network Classifiers"
+        authors: "Zhan-Yi Liao"
+        advisors:
+          - "<strong>Jaewon Yoo</strong>"
+          - "Po-An Chen"
+        status: "Thesis"
+        venue: "M.S. Thesis, Institute of Information Management, NYCU"
+        year: 2025
+        links:
+          html: "https://thesis.lib.nycu.edu.tw/items/afad6b16-1a74-4d3b-9af9-6d0546212a73"
+        award: "2025 Best Master's Thesis Award (Honorable Award), Algorithms and Computation Theory Society of Taiwan — awarded to Zhan-Yi Liao's master's thesis"
+        related:
+          - id: robust-ce-wp
+            label: "Related working paper"
+
+      - id: xcd-confounder-discovery
+        title: "Improving Causal Identification with Explainable AI-Assisted Confounder Discovery"
+        authors_note: "Authorship to be determined."
+        status: "Work in Progress"
+
+      - id: synthetic-respondents
+        title: "Can AI Dream Up a Control Group? Generating Synthetic Respondents to Reconstruct Untreated Potential Outcomes"
+        authors_note: "Authorship to be determined."
+        status: "Work in Progress"
+
   - id: innovation
-    title: "Innovation & Technology Management"
+    title: "Innovation & Firm Strategy"
     icon: "fa-solid fa-lightbulb"
-    description: "Examining how firms leverage strategic alliances, intellectual property, and emerging technologies to drive innovation and manage competitive dynamics."
+    description: "How firms innovate and commercialize products, and how their strategic choices respond to public policy, alliances, intellectual property, and market uncertainty."
     papers:
-      - title: "The Effect of Alliance Activity on Patent Litigation: In the Case of Printed Electronics"
-        authors: "Kang, M., <strong>Yoo, J.</strong>, Kim*, W., Kim, N."
+      - id: jbr-detailing
+        title: "Why does pharmaceutical detailing increase over time? Indication expansion versus inter-firm competition"
+        authors: "Nam, S., Kim, M., <strong>Yoo, J.*</strong>"
+        status: "Revise & Resubmit"
+        venue: "Journal of Business Research"
+        venue_note: "SSCI"
+        links:
+          video: "https://www.youtube.com/watch?v=P-ymLIIJuoI"
+
+      - id: alliance-patent-litigation
+        title: "The Effect of Alliance Activity on Patent Litigation: In the Case of Printed Electronics"
+        authors: "Kang, M., <strong>Yoo, J.</strong>, Kim, W.*, Kim, N."
         status: "Published"
         venue: "Journal of Korea Technology Innovation Society, 21(1), 265–299"
         year: 2018
@@ -140,18 +198,46 @@ areas:
           html: "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07412322"
           video: "https://www.youtube.com/watch?v=CbzqEhEFY-k"
 
-      - title: "Effects of Paid Family Leave Policy on Firm Risk-Taking: A Quasi-Experimental Approach"
-        authors: "Lin, P.-J., <strong>Yoo, J.*</strong>"
+      - id: john-pfl-moderators-thesis
+        title: "State Economic Freedom and Firm Size as Moderators of Paid Family Leave’s Effect on Firm Risk-Taking"
+        authors: "John Loui Santiago"
+        advisors:
+          - "<strong>Jaewon Yoo</strong>"
+        status: "Thesis"
+        venue: "M.S. Thesis, iMBA, NTHU"
+        year: 2026
+        links:
+          html: "https://etd.lib.nthu.edu.tw/detail/0a91ea507b20da363b670efe7e9c0b52/"
+
+      - id: pfl-risk-taking-thesis
+        title: "Effects of Paid Family Leave Policy on Firm Risk-Taking: A Quasi-Experimental Approach"
+        authors: "Pei-Jou Lin"
+        advisors:
+          - "<strong>Jaewon Yoo</strong>"
         status: "Thesis"
         venue: "M.S. Thesis, Institute of Service Science, NTHU"
         year: 2025
         links:
           html: "https://etd.lib.nthu.edu.tw/detail/c25e999348b0136aceab80dc25d730b2/"
 
-      - title: "Examining the Impact of Paid Family and Medical Leave Policy on Firm Innovation: Evidence from Quasi-Experiments"
-        authors: "Hsiao, Y.-C., <strong>Yoo, J.*</strong>"
+      - id: pfml-innovation-thesis
+        title: "Examining the Impact of Paid Family and Medical Leave Policy on Firm Innovation: Evidence from Quasi-Experiments"
+        authors: "Yu-Chen Hsiao"
+        advisors:
+          - "<strong>Jaewon Yoo</strong>"
         status: "Thesis"
         venue: "M.S. Thesis, Institute of Service Science, NTHU"
         year: 2024
         links:
           html: "https://etd.lib.nthu.edu.tw/detail/0570df8a7951673cc90d245c94b48a0f/"
+
+      - id: csr-visibility-thesis
+        title: "Does CSR Visibility Lead to Superior Financial Performance? Evidence from a Regression Discontinuity Design"
+        authors: "Yichun Liu"
+        advisors:
+          - "<strong>Jaewon Yoo</strong>"
+        status: "Thesis"
+        venue: "M.S. Thesis, Institute of Service Science, NTHU"
+        year: 2023
+        links:
+          html: "https://etd.lib.nthu.edu.tw/detail/3debccdc9b57b7596044c3c05ffe1b1b/"

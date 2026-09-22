@@ -5,42 +5,38 @@ permalink: /
 
 hero_kicker: "National Tsing Hua University · College of Technology Management"
 hero_title: "Causal Analysis for<br>Digital Interventions Lab"
-hero_subtitle: "We investigate how platform and technology design choices shape user behavior and market outcomes, using rigorous causal inference methodology."
+hero_subtitle: "We study how digital technologies shape behavior and markets, and how firms innovate and respond to policy and market uncertainty."
 
-research_areas_subtitle: "Our research spans four interconnected areas at the intersection of causal inference, digital platforms, AI, and innovation."
+research_areas_subtitle: "Our work combines empirical causal analysis with research on counterfactual reasoning and explainable AI."
 
 research_areas:
-  - title: "Platform Design & Consumer Behavior"
+  - id: platform
+    title: "Digital Platforms & Consumer Behavior"
     icon: "fa-solid fa-display"
-    description: "We study how digital platform and technology design changes alter decision environments, reallocate cognitive and transactional frictions, and affect outcomes such as engagement, conversion, and spending."
+    description: "We study how digital platforms, retail technologies, and decision environments shape behavior, consumer choice, and market outcomes."
     tags:
       - "Digital Platforms"
-      - "Online Media"
       - "Retail Technology"
+      - "Decision Environments"
       - "Consumer Choice"
 
-  - title: "Causal Inference Methods"
-    icon: "fa-solid fa-scale-balanced"
-    description: "We employ large-scale field experiments (RCTs) through industry collaborations and quasi-experimental designs such as RDD, DiD, and Synthetic DiD, along with causal ML tools for heterogeneous treatment effects."
-    tags:
-      - "RCTs"
-      - "Diff-in-Diff"
-      - "RDD"
-      - "Causal ML"
-
-  - title: "Counterfactual Reasoning & XAI"
+  - id: xai
+    title: "Causal Inference & Explainable AI"
     icon: "fa-solid fa-brain"
-    description: "We examine how credible counterfactuals can be constructed for causal effect estimation and for producing interpretable, actionable counterfactual explanations when clean control groups are unavailable."
+    description: "We investigate counterfactual reasoning in causal inference and explainable AI, develop optimization methods for robust explanations, and explore AI-assisted causal analysis."
     tags:
-      - "Counterfactual Explanations"
+      - "Causal Inference"
+      - "Counterfactual Reasoning"
       - "Explainable AI"
-      - "Debiased ML"
+      - "Robust Optimization"
 
-  - title: "Innovation & Technology Management"
+  - id: innovation
+    title: "Innovation & Firm Strategy"
     icon: "fa-solid fa-lightbulb"
-    description: "We examine how firms leverage strategic alliances, intellectual property, and emerging technologies to drive innovation and manage competitive dynamics."
+    description: "We examine how innovation, public policy, and market uncertainty shape firms' investment, risk-taking, and competitive strategies."
     tags:
-      - "Strategic Alliances"
-      - "Patent Strategy"
-      - "Technology Innovation"
+      - "Innovation"
+      - "Firm Strategy"
+      - "Public Policy"
+      - "Intellectual Property"
 ---

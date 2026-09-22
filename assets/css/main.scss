@@ -355,10 +355,15 @@ html[data-theme="dark"] .hero {
 }
 
 .research-grid--home {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  @media (max-width: 1024px) { grid-template-columns: repeat(2, 1fr); }
   @media (max-width: 768px) { grid-template-columns: 1fr; }
+
+  .research-card { display: flex; flex-direction: column; }
+  .research-card h3 { min-height: 2.8em; }
+  .research-card h3 a { color: inherit; }
+  .research-card h3 a:hover { color: var(--secondary); }
+  .tag-list { margin-top: auto; padding-top: 0.75rem; }
 }
 
 .research-card {
@@ -864,6 +869,37 @@ html[data-theme="dark"] .cta-banner {
 // Research Page
 // ═══════════════════════════════════════════════════════════════════════════════
 
+.research-review-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+
+  .paper-status-badge { margin-bottom: 0; }
+}
+
+.research-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.research-author-note { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.75rem; }
+.research-topic, .paper-item, .research-legacy-anchor { scroll-margin-top: 6rem; }
+
+html[data-theme="dark"] {
+  .research-grid--home .tag, .research-nav a, .paper-related a { color: #93c5fd; }
+  .research-nav a:hover, .paper-related a:hover { color: #a5f3fc; }
+}
+
 .research-topic {
   margin-bottom: 3.5rem;
   &:last-child { margin-bottom: 0; }
@@ -1071,6 +1107,20 @@ html[data-theme="dark"] .paper-status-badge {
 }
 
 html[data-theme="dark"] .paper-award { color: #fbbf24; }
+
+.paper-detail {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+
+  ul { margin: 0.2rem 0 0; padding-left: 1.25rem; }
+  li + li { margin-top: 0.2rem; }
+  strong { color: var(--text); }
+}
+
+.paper-detail-label { font-weight: 600; color: var(--text); }
+.paper-related { margin-top: 0.5rem; font-size: 0.85rem; }
 
 .paper-links {
   display: flex;

@@ -1,0 +1,50 @@
+{% assign paper = include.paper %}
+{% assign status = site.data.research_statuses[paper.status] %}
+<article class="paper-item" id="{{ paper.id }}">
+  <div class="paper-status-badge {{ status.class | default: paper.status | slugify }}">
+    {% if status.icon %}<i class="fa-solid {{ status.icon }}" aria-hidden="true"></i>{% endif %}
+    <span>{{ paper.status | escape }}</span>
+  </div>
+  <h3 class="paper-title">{{ paper.title | escape }}</h3>
+  {% if paper.authors %}<div class="paper-authors">{{ paper.authors }}</div>{% endif %}
+  {% if paper.authors_note %}<p class="paper-authors">{{ paper.authors_note | escape }}</p>{% endif %}
+  {% if paper.venue != "" and paper.venue %}
+  <div class="paper-venue">
+    <i class="fa-solid fa-book-open" aria-hidden="true"></i> {{ paper.venue | escape }}{% if paper.year %}, {{ paper.year }}{% endif %}
+    {% if paper.venue_note %}<span class="venue-note">({{ paper.venue_note | escape }})</span>{% endif %}
+  </div>
+  {% elsif paper.year %}
+  <div class="paper-venue">{{ paper.year }}</div>
+  {% endif %}
+  {% if paper.advisors %}
+  <div class="paper-detail"><span class="paper-detail-label">{% if paper.advisors.size > 1 %}Co-advisors{% else %}Advisor{% endif %}:</span> {{ paper.advisors | join: '; ' }}</div>
+  {% endif %}
+  {% if paper.award %}
+  <div class="paper-award"><i class="fa-solid fa-trophy" aria-hidden="true"></i> {{ paper.award | escape }}</div>
+  {% endif %}
+  {% if paper.presentations %}
+  <div class="paper-detail">
+    <span class="paper-detail-label">Presentations &amp; workshops:</span>
+    <ul>{% for presentation in paper.presentations %}<li>{{ presentation | escape }}</li>{% endfor %}</ul>
+  </div>
+  {% endif %}
+  {% if paper.grants %}
+  <div class="paper-detail">
+    <span class="paper-detail-label">Research support:</span>
+    <ul>{% for grant in paper.grants %}<li>{{ grant | escape }}</li>{% endfor %}</ul>
+  </div>
+  {% endif %}
+  {% if paper.related %}
+  <div class="paper-related">
+    {% for related in paper.related %}<a href="#{{ related.id }}">{{ related.label | escape }}</a>{% unless forloop.last %}<span aria-hidden="true"> · </span>{% endunless %}{% endfor %}
+  </div>
+  {% endif %}
+  {% if paper.links %}
+  <div class="paper-links">
+    {% if paper.links.html %}<a href="{{ paper.links.html }}" target="_blank" rel="noopener"><i class="fa-solid fa-link" aria-hidden="true"></i> Link</a>{% endif %}
+    {% if paper.links.ssrn %}<a href="{{ paper.links.ssrn }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> SSRN</a>{% endif %}
+    {% if paper.links.arxiv %}<a href="{{ paper.links.arxiv }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> arXiv</a>{% endif %}
+    {% if paper.links.video and paper.links.video != "" %}<a href="{{ paper.links.video }}" target="_blank" rel="noopener"><i class="fa-solid fa-video" aria-hidden="true"></i> Video</a>{% endif %}
+  </div>
+  {% endif %}
+</article>
