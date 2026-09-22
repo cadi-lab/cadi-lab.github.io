@@ -6,18 +6,13 @@ areas:
     icon: "fa-solid fa-store"
     description: "How digital platform architectures — comment systems, ad formats, payment methods, and recommendation engines — shape consumer decisions and market outcomes."
     papers:
-      # === BLINDED 2026-06 for blind review / conference presentation. ===
-      # Real fields are commented out below to keep the info in git; restore them after the review/conference.
-      - title: "[Title and authors withheld; under blind review]"
-        status: "Under review"
-      #   title: "Interactive Blind Lead-In Ads and Purchase Conversion: The Roles of Completion and Creative Design Features"
-      #   authors: "Yoon, S., <strong>Yoo, J.*</strong>, Kim, M., Kim, W., Lee, M.S."
-      #   status: "Revise & Resubmit"
-      #   venue: "Journal of Interactive Marketing"
-      #   venue_note: "SSCI"
-      #   links: {}
+      - title: "Interactive Blind Lead-In Ads and Purchase Conversion: The Roles of Completion and Creative Design Features"
+        authors: "Yoon, S., <strong>Yoo, J.*</strong>, Kim, M., Kim, W., Lee, M.S."
+        status: "Accepted"
+        venue: "Journal of Interactive Marketing"
+        venue_note: "SSCI"
 
-      - title: "Why Do Direct-to-Physician Promotions by Pharmaceutical Firms Increase Over Time? Evidence from 464 Drugs"
+      - title: "Why does pharmaceutical detailing increase over time? Indication expansion versus inter-firm competition"
         authors: "Nam, S., Kim, M., <strong>Yoo, J.*</strong>"
         status: "Revise & Resubmit"
         venue: "Journal of Business Research"
