@@ -947,7 +947,7 @@ html[data-theme="dark"] .topic-header > i {
 
   i { flex-shrink: 0; font-size: 0.9em; }
 
-  // Accepted is the focal milestone. Other lifecycle stages use tonal fills.
+  // Accepted and published are confirmed outcomes with equal emphasis.
   &.accepted-forthcoming {
     --status-bg: #15803d;
     --status-ink: #ffffff;
@@ -955,9 +955,10 @@ html[data-theme="dark"] .topic-header > i {
     font-weight: 700;
   }
   &.published {
-    --status-bg: #e8edf5;
-    --status-ink: #1e3a5f;
-    --status-border: #c5d1e2;
+    --status-bg: #1e3a5f;
+    --status-ink: #ffffff;
+    --status-border: #1e3a5f;
+    font-weight: 700;
   }
   &.revise-resubmit {
     --status-bg: #fff7ed;
@@ -998,9 +999,9 @@ html[data-theme="dark"] .paper-status-badge {
     --status-border: #22c55e;
   }
   &.published {
-    --status-bg: #26364b;
-    --status-ink: #d7e4f5;
-    --status-border: #506581;
+    --status-bg: #60a5fa;
+    --status-ink: #10243e;
+    --status-border: #60a5fa;
   }
   &.revise-resubmit {
     --status-bg: #422818;
