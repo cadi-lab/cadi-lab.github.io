@@ -949,16 +949,14 @@ html[data-theme="dark"] .topic-header > i {
 
   // Accepted and published are confirmed outcomes with equal emphasis.
   &.accepted-forthcoming {
-    --status-bg: #15803d;
-    --status-ink: #ffffff;
+    --status-bg: #d9eddf;
+    --status-ink: #166534;
     --status-border: #15803d;
-    font-weight: 700;
   }
   &.published {
-    --status-bg: #1e3a5f;
-    --status-ink: #ffffff;
+    --status-bg: #dce6f2;
+    --status-ink: #1e3a5f;
     --status-border: #1e3a5f;
-    font-weight: 700;
   }
   &.revise-resubmit {
     --status-bg: #fff7ed;
@@ -994,13 +992,13 @@ html[data-theme="dark"] .topic-header > i {
 
 html[data-theme="dark"] .paper-status-badge {
   &.accepted-forthcoming {
-    --status-bg: #22c55e;
-    --status-ink: #052e16;
+    --status-bg: #1d3c2b;
+    --status-ink: #b5e4c6;
     --status-border: #22c55e;
   }
   &.published {
-    --status-bg: #60a5fa;
-    --status-ink: #10243e;
+    --status-bg: #263d59;
+    --status-ink: #c7ddf6;
     --status-border: #60a5fa;
   }
   &.revise-resubmit {
