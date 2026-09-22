@@ -71,8 +71,6 @@ areas:
       - id: mave-housing-thesis
         title: "The Effects of Short-Term Rental Platforms on the Housing Market: Evidence from Saint Lucia Using a Bartik Shift-Share Instrumental Variable Approach"
         authors: "Mave Kimara Alexander"
-        advisors:
-          - "<strong>Jaewon Yoo</strong>"
         status: "Thesis"
         venue: "M.S. Thesis, iMBA, NTHU"
         year: 2026
@@ -82,8 +80,6 @@ areas:
       - id: sales-ban-thesis
         title: "Unintended Consequences of Sales Ban: Empirical Analysis of the Book Retailing Industry"
         authors: "Natasha Carissa Tedjasukmana"
-        advisors:
-          - "<strong>Jaewon Yoo</strong>"
         status: "Thesis"
         venue: "M.S. Thesis, iMBA, NTHU"
         year: 2025
@@ -93,8 +89,6 @@ areas:
       - id: trending-topic-thesis
         title: "When Algorithms Go Silent: Effects of Trending Topic Suspension on Political Information Consumption"
         authors: "Medjine Nestant"
-        advisors:
-          - "<strong>Jaewon Yoo</strong>"
         status: "Thesis"
         venue: "M.S. Thesis, iMBA, NTHU"
         year: 2025
@@ -104,8 +98,6 @@ areas:
       - id: ai-adoption-thesis
         title: "Influence of Message Framing on Consumer Adoption of AI Services: Evidence from the Financial Sector"
         authors: "Sin-Yu Lin"
-        advisors:
-          - "<strong>Jaewon Yoo</strong>"
         status: "Thesis"
         venue: "M.S. Thesis, Institute of Service Science, NTHU"
         year: 2024
@@ -115,8 +107,6 @@ areas:
       - id: private-label-thesis
         title: "Evaluating Risk-Reducing Incentives to Influence Consumers' Purchase Decision of Private-Label Products"
         authors: "Daniel Vinicio Gonzalez de Leon"
-        advisors:
-          - "<strong>Jaewon Yoo</strong>"
         status: "Thesis"
         venue: "M.S. Thesis, iMBA, NTHU"
         year: 2023
@@ -152,8 +142,8 @@ areas:
         title: "Structure-Aware Robust Counterfactual Explanations via Conditional Gaussian Network Classifiers"
         authors: "Zhan-Yi Liao"
         advisors:
-          - "<strong>Jaewon Yoo</strong>"
           - "Po-An Chen"
+          - "Jaewon Yoo"
         status: "Thesis"
         venue: "M.S. Thesis, Institute of Information Management, NYCU"
         year: 2025
@@ -201,8 +191,6 @@ areas:
       - id: john-pfl-moderators-thesis
         title: "State Economic Freedom and Firm Size as Moderators of Paid Family Leave’s Effect on Firm Risk-Taking"
         authors: "John Loui Santiago"
-        advisors:
-          - "<strong>Jaewon Yoo</strong>"
         status: "Thesis"
         venue: "M.S. Thesis, iMBA, NTHU"
         year: 2026
@@ -212,8 +200,6 @@ areas:
       - id: pfl-risk-taking-thesis
         title: "Effects of Paid Family Leave Policy on Firm Risk-Taking: A Quasi-Experimental Approach"
         authors: "Pei-Jou Lin"
-        advisors:
-          - "<strong>Jaewon Yoo</strong>"
         status: "Thesis"
         venue: "M.S. Thesis, Institute of Service Science, NTHU"
         year: 2025
@@ -223,8 +209,6 @@ areas:
       - id: pfml-innovation-thesis
         title: "Examining the Impact of Paid Family and Medical Leave Policy on Firm Innovation: Evidence from Quasi-Experiments"
         authors: "Yu-Chen Hsiao"
-        advisors:
-          - "<strong>Jaewon Yoo</strong>"
         status: "Thesis"
         venue: "M.S. Thesis, Institute of Service Science, NTHU"
         year: 2024
@@ -234,8 +218,6 @@ areas:
       - id: csr-visibility-thesis
         title: "Does CSR Visibility Lead to Superior Financial Performance? Evidence from a Regression Discontinuity Design"
         authors: "Yichun Liu"
-        advisors:
-          - "<strong>Jaewon Yoo</strong>"
         status: "Thesis"
         venue: "M.S. Thesis, Institute of Service Science, NTHU"
         year: 2023
