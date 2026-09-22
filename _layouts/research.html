@@ -26,7 +26,11 @@ layout: default
     <div class="papers-list">
       {% for paper in area.papers %}
       <div class="paper-item">
-        <div class="paper-status-badge {{ paper.status | slugify }}">{{ paper.status }}</div>
+        {% assign status = site.data.research_statuses[paper.status] %}
+        <div class="paper-status-badge {{ status.class | default: paper.status | slugify }}">
+          {% if status.icon %}<i class="fa-solid {{ status.icon }}" aria-hidden="true"></i>{% endif %}
+          <span>{{ paper.status | escape }}</span>
+        </div>
         <h3 class="paper-title">{{ paper.title }}</h3>
         <div class="paper-authors">{{ paper.authors }}</div>
         {% if paper.venue != "" and paper.venue %}

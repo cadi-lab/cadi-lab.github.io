@@ -1,0 +1,25 @@
+# Display labels map to stable styles independently of their punctuation.
+"Accepted & Forthcoming":
+  class: accepted-forthcoming
+  icon: fa-circle-check
+"Published":
+  class: published
+  icon: fa-book
+"Revise & Resubmit":
+  class: revise-resubmit
+  icon: fa-rotate
+"Revision invited":
+  class: revision-invited
+  icon: fa-envelope-open-text
+"Under review":
+  class: under-review
+  icon: fa-magnifying-glass
+"Working Paper":
+  class: working-paper
+  icon: fa-file-lines
+"Work in Progress":
+  class: work-in-progress
+  icon: fa-pen
+"Thesis":
+  class: thesis
+  icon: fa-graduation-cap
