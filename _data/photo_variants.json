@@ -1,0 +1,432 @@
+{
+  "daniel_gonzalez.jpg": {
+    "width": 517,
+    "height": 506,
+    "card": [
+      {
+        "path": "/assets/img/optimized/daniel_gonzalez-96f3b41f4d15-b478bfe6-327x320.webp",
+        "width": 327,
+        "height": 320,
+        "bytes": 14882
+      },
+      {
+        "path": "/assets/img/optimized/daniel_gonzalez-96f3b41f4d15-b478bfe6-490x480.webp",
+        "width": 490,
+        "height": 480,
+        "bytes": 25486
+      },
+      {
+        "path": "/assets/img/optimized/daniel_gonzalez-96f3b41f4d15-b478bfe6-517x506.webp",
+        "width": 517,
+        "height": 506,
+        "bytes": 25808
+      }
+    ],
+    "full": [
+      {
+        "path": "/assets/img/optimized/daniel_gonzalez-96f3b41f4d15-b478bfe6-517x506.webp",
+        "width": 517,
+        "height": 506,
+        "bytes": 25808
+      }
+    ]
+  },
+  "jean_liu.jpg": {
+    "width": 2722,
+    "height": 2722,
+    "card": [
+      {
+        "path": "/assets/img/optimized/jean_liu-49ec0dc062f6-b478bfe6-320x320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 29732
+      },
+      {
+        "path": "/assets/img/optimized/jean_liu-49ec0dc062f6-b478bfe6-480x480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 57026
+      },
+      {
+        "path": "/assets/img/optimized/jean_liu-49ec0dc062f6-b478bfe6-1280x1280.webp",
+        "width": 1280,
+        "height": 1280,
+        "bytes": 313850
+      }
+    ],
+    "full": [
+      {
+        "path": "/assets/img/optimized/jean_liu-49ec0dc062f6-b478bfe6-1280x1280.webp",
+        "width": 1280,
+        "height": 1280,
+        "bytes": 313850
+      },
+      {
+        "path": "/assets/img/optimized/jean_liu-49ec0dc062f6-b478bfe6-2048x2048.webp",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 731758
+      },
+      {
+        "path": "/assets/img/optimized/jean_liu-49ec0dc062f6-b478bfe6-2722x2722.webp",
+        "width": 2722,
+        "height": 2722,
+        "bytes": 1142470
+      }
+    ]
+  },
+  "joanna_hsiao.jpg": {
+    "width": 4095,
+    "height": 2730,
+    "card": [
+      {
+        "path": "/assets/img/optimized/joanna_hsiao-0223d44bb5df-b478bfe6-480x320.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 11224
+      },
+      {
+        "path": "/assets/img/optimized/joanna_hsiao-0223d44bb5df-b478bfe6-720x480.webp",
+        "width": 720,
+        "height": 480,
+        "bytes": 20078
+      },
+      {
+        "path": "/assets/img/optimized/joanna_hsiao-0223d44bb5df-b478bfe6-1280x853.webp",
+        "width": 1280,
+        "height": 853,
+        "bytes": 50526
+      }
+    ],
+    "full": [
+      {
+        "path": "/assets/img/optimized/joanna_hsiao-0223d44bb5df-b478bfe6-1280x853.webp",
+        "width": 1280,
+        "height": 853,
+        "bytes": 50526
+      },
+      {
+        "path": "/assets/img/optimized/joanna_hsiao-0223d44bb5df-b478bfe6-2048x1365.webp",
+        "width": 2048,
+        "height": 1365,
+        "bytes": 109226
+      },
+      {
+        "path": "/assets/img/optimized/joanna_hsiao-0223d44bb5df-b478bfe6-3072x2048.webp",
+        "width": 3072,
+        "height": 2048,
+        "bytes": 205180
+      },
+      {
+        "path": "/assets/img/optimized/joanna_hsiao-0223d44bb5df-b478bfe6-4095x2730.webp",
+        "width": 4095,
+        "height": 2730,
+        "bytes": 333070
+      }
+    ]
+  },
+  "john_loui_santiago.jpg": {
+    "width": 2497,
+    "height": 2589,
+    "card": [
+      {
+        "path": "/assets/img/optimized/john_loui_santiago-b7892fec90d9-b478bfe6-320x332.webp",
+        "width": 320,
+        "height": 332,
+        "bytes": 16396
+      },
+      {
+        "path": "/assets/img/optimized/john_loui_santiago-b7892fec90d9-b478bfe6-480x498.webp",
+        "width": 480,
+        "height": 498,
+        "bytes": 33784
+      },
+      {
+        "path": "/assets/img/optimized/john_loui_santiago-b7892fec90d9-b478bfe6-1235x1280.webp",
+        "width": 1235,
+        "height": 1280,
+        "bytes": 209958
+      }
+    ],
+    "full": [
+      {
+        "path": "/assets/img/optimized/john_loui_santiago-b7892fec90d9-b478bfe6-1235x1280.webp",
+        "width": 1235,
+        "height": 1280,
+        "bytes": 209958
+      },
+      {
+        "path": "/assets/img/optimized/john_loui_santiago-b7892fec90d9-b478bfe6-1975x2048.webp",
+        "width": 1975,
+        "height": 2048,
+        "bytes": 476976
+      },
+      {
+        "path": "/assets/img/optimized/john_loui_santiago-b7892fec90d9-b478bfe6-2497x2589.webp",
+        "width": 2497,
+        "height": 2589,
+        "bytes": 634800
+      }
+    ]
+  },
+  "keri_liu.jpg": {
+    "width": 6240,
+    "height": 4160,
+    "card": [
+      {
+        "path": "/assets/img/optimized/keri_liu-29a4211eaccb-b478bfe6-480x320.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 11456
+      },
+      {
+        "path": "/assets/img/optimized/keri_liu-29a4211eaccb-b478bfe6-720x480.webp",
+        "width": 720,
+        "height": 480,
+        "bytes": 18064
+      },
+      {
+        "path": "/assets/img/optimized/keri_liu-29a4211eaccb-b478bfe6-1280x853.webp",
+        "width": 1280,
+        "height": 853,
+        "bytes": 42080
+      }
+    ],
+    "full": [
+      {
+        "path": "/assets/img/optimized/keri_liu-29a4211eaccb-b478bfe6-1280x853.webp",
+        "width": 1280,
+        "height": 853,
+        "bytes": 42080
+      },
+      {
+        "path": "/assets/img/optimized/keri_liu-29a4211eaccb-b478bfe6-2048x1365.webp",
+        "width": 2048,
+        "height": 1365,
+        "bytes": 93792
+      },
+      {
+        "path": "/assets/img/optimized/keri_liu-29a4211eaccb-b478bfe6-3072x2048.webp",
+        "width": 3072,
+        "height": 2048,
+        "bytes": 189498
+      },
+      {
+        "path": "/assets/img/optimized/keri_liu-29a4211eaccb-b478bfe6-6240x4160.webp",
+        "width": 6240,
+        "height": 4160,
+        "bytes": 621038
+      }
+    ]
+  },
+  "mave_alexander.jpg": {
+    "width": 4442,
+    "height": 4442,
+    "card": [
+      {
+        "path": "/assets/img/optimized/mave_alexander-6e917efe7bc4-b478bfe6-320x320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 24568
+      },
+      {
+        "path": "/assets/img/optimized/mave_alexander-6e917efe7bc4-b478bfe6-480x480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 49612
+      },
+      {
+        "path": "/assets/img/optimized/mave_alexander-6e917efe7bc4-b478bfe6-1280x1280.webp",
+        "width": 1280,
+        "height": 1280,
+        "bytes": 264370
+      }
+    ],
+    "full": [
+      {
+        "path": "/assets/img/optimized/mave_alexander-6e917efe7bc4-b478bfe6-1280x1280.webp",
+        "width": 1280,
+        "height": 1280,
+        "bytes": 264370
+      },
+      {
+        "path": "/assets/img/optimized/mave_alexander-6e917efe7bc4-b478bfe6-2048x2048.webp",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 643912
+      },
+      {
+        "path": "/assets/img/optimized/mave_alexander-6e917efe7bc4-b478bfe6-3072x3072.webp",
+        "width": 3072,
+        "height": 3072,
+        "bytes": 1333528
+      },
+      {
+        "path": "/assets/img/optimized/mave_alexander-6e917efe7bc4-b478bfe6-4442x4442.webp",
+        "width": 4442,
+        "height": 4442,
+        "bytes": 2310380
+      }
+    ]
+  },
+  "natasha_carissa.jpg": {
+    "width": 2533,
+    "height": 3799,
+    "card": [
+      {
+        "path": "/assets/img/optimized/natasha_carissa-48b43ffc663f-b478bfe6-320x480.webp",
+        "width": 320,
+        "height": 480,
+        "bytes": 19920
+      },
+      {
+        "path": "/assets/img/optimized/natasha_carissa-48b43ffc663f-b478bfe6-480x720.webp",
+        "width": 480,
+        "height": 720,
+        "bytes": 44310
+      },
+      {
+        "path": "/assets/img/optimized/natasha_carissa-48b43ffc663f-b478bfe6-853x1280.webp",
+        "width": 853,
+        "height": 1280,
+        "bytes": 200210
+      }
+    ],
+    "full": [
+      {
+        "path": "/assets/img/optimized/natasha_carissa-48b43ffc663f-b478bfe6-853x1280.webp",
+        "width": 853,
+        "height": 1280,
+        "bytes": 200210
+      },
+      {
+        "path": "/assets/img/optimized/natasha_carissa-48b43ffc663f-b478bfe6-1366x2048.webp",
+        "width": 1366,
+        "height": 2048,
+        "bytes": 685534
+      },
+      {
+        "path": "/assets/img/optimized/natasha_carissa-48b43ffc663f-b478bfe6-2048x3072.webp",
+        "width": 2048,
+        "height": 3072,
+        "bytes": 1846874
+      },
+      {
+        "path": "/assets/img/optimized/natasha_carissa-48b43ffc663f-b478bfe6-2533x3799.webp",
+        "width": 2533,
+        "height": 3799,
+        "bytes": 2919484
+      }
+    ]
+  },
+  "pearl_lin.jpeg": {
+    "width": 200,
+    "height": 200,
+    "card": [
+      {
+        "path": "/assets/img/optimized/pearl_lin-e654b98e429c-b478bfe6-200x200.webp",
+        "width": 200,
+        "height": 200,
+        "bytes": 7902
+      }
+    ],
+    "full": [
+      {
+        "path": "/assets/img/optimized/pearl_lin-e654b98e429c-b478bfe6-200x200.webp",
+        "width": 200,
+        "height": 200,
+        "bytes": 7902
+      }
+    ]
+  },
+  "prof_jaewon_yoo.jpg": {
+    "width": 1932,
+    "height": 1663,
+    "card": [
+      {
+        "path": "/assets/img/optimized/prof_jaewon_yoo-23de7004e20e-b478bfe6-465x400.webp",
+        "width": 465,
+        "height": 400,
+        "bytes": 76250
+      },
+      {
+        "path": "/assets/img/optimized/prof_jaewon_yoo-23de7004e20e-b478bfe6-744x640.webp",
+        "width": 744,
+        "height": 640,
+        "bytes": 158752
+      },
+      {
+        "path": "/assets/img/optimized/prof_jaewon_yoo-23de7004e20e-b478bfe6-1280x1102.webp",
+        "width": 1280,
+        "height": 1102,
+        "bytes": 399012
+      }
+    ],
+    "full": [
+      {
+        "path": "/assets/img/optimized/prof_jaewon_yoo-23de7004e20e-b478bfe6-1280x1102.webp",
+        "width": 1280,
+        "height": 1102,
+        "bytes": 399012
+      },
+      {
+        "path": "/assets/img/optimized/prof_jaewon_yoo-23de7004e20e-b478bfe6-original.jpg",
+        "width": 1932,
+        "height": 1663,
+        "bytes": 711785
+      }
+    ]
+  },
+  "young_shin.jpg": {
+    "width": 311,
+    "height": 400,
+    "card": [
+      {
+        "path": "/assets/img/optimized/young_shin-a45b8fe0a892-b478bfe6-311x400.webp",
+        "width": 311,
+        "height": 400,
+        "bytes": 14192
+      }
+    ],
+    "full": [
+      {
+        "path": "/assets/img/optimized/young_shin-a45b8fe0a892-b478bfe6-311x400.webp",
+        "width": 311,
+        "height": 400,
+        "bytes": 14192
+      }
+    ]
+  },
+  "zhanyi_liao.jpg": {
+    "width": 535,
+    "height": 566,
+    "card": [
+      {
+        "path": "/assets/img/optimized/zhanyi_liao-1b8381b12dc7-b478bfe6-320x339.webp",
+        "width": 320,
+        "height": 339,
+        "bytes": 23760
+      },
+      {
+        "path": "/assets/img/optimized/zhanyi_liao-1b8381b12dc7-b478bfe6-480x508.webp",
+        "width": 480,
+        "height": 508,
+        "bytes": 46294
+      },
+      {
+        "path": "/assets/img/optimized/zhanyi_liao-1b8381b12dc7-b478bfe6-535x566.webp",
+        "width": 535,
+        "height": 566,
+        "bytes": 54636
+      }
+    ],
+    "full": [
+      {
+        "path": "/assets/img/optimized/zhanyi_liao-1b8381b12dc7-b478bfe6-535x566.webp",
+        "width": 535,
+        "height": 566,
+        "bytes": 54636
+      }
+    ]
+  }
+}

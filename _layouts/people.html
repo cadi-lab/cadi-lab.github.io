@@ -17,7 +17,7 @@ layout: default
   <div class="professor-card professor-card--page">
     <div class="professor-photo">
       {% if prof.photo %}
-      <img src="{{ '/assets/img/' | append: prof.photo | relative_url }}" alt="{{ prof.name }}" class="photo-clickable" data-full="{{ '/assets/img/' | append: prof.photo | relative_url }}">
+      {% include profile-photo.html person=prof width=140 height=170 loading="eager" interactive=true %}
       {% endif %}
     </div>
     <div class="professor-info">
@@ -83,7 +83,7 @@ layout: default
     <div class="people-profile-card people-profile-card--wide">
       <div class="profile-photo profile-photo--lg"{% if student.photo_bg %} style="background: {{ student.photo_bg }}"{% endif %}>
         {% if student.photo != "" and student.photo %}
-        <img src="{{ '/assets/img/' | append: student.photo | relative_url }}" alt="{{ student.name }}" class="photo-clickable" data-full="{{ '/assets/img/' | append: student.photo | relative_url }}"{% if student.photo_position or student.photo_scale %} style="{% if student.photo_position %}object-position: {{ student.photo_position }};{% endif %}{% if student.photo_scale %}transform: scale({{ student.photo_scale }});{% endif %}"{% endif %}>
+        {% include profile-photo.html person=student interactive=true %}
         {% else %}
         {% assign name_parts = student.name | split: ' ' %}
         {% assign first_char = name_parts[0] | slice: 0 %}
@@ -150,7 +150,7 @@ layout: default
         <div class="people-profile-card people-profile-card--wide">
           <div class="profile-photo profile-photo--lg"{% if alum.photo_bg %} style="background: {{ alum.photo_bg }}"{% endif %}>
             {% if alum.photo != "" and alum.photo %}
-            <img src="{{ '/assets/img/' | append: alum.photo | relative_url }}" alt="{{ alum.name }}" class="photo-clickable" data-full="{{ '/assets/img/' | append: alum.photo | relative_url }}"{% if alum.photo_position or alum.photo_scale %} style="{% if alum.photo_position %}object-position: {{ alum.photo_position }};{% endif %}{% if alum.photo_scale %}transform: scale({{ alum.photo_scale }});{% endif %}"{% endif %}>
+            {% include profile-photo.html person=alum interactive=true %}
             {% else %}
             {% assign name_parts = alum.name | split: ' ' %}
             {% assign first_char = name_parts[0] | slice: 0 %}
@@ -233,38 +233,9 @@ layout: default
 </section>
 
 <!-- Photo Lightbox -->
-<div class="lightbox" id="photoLightbox">
-  <button class="lightbox-close" aria-label="Close">&times;</button>
-  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+<div class="lightbox" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Enlarged profile photo" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close enlarged photo">&times;</button>
+  <img class="lightbox-img" id="lightboxImg" alt="">
+  <p class="lightbox-status" id="lightboxStatus" role="status" hidden></p>
 </div>
-
-<script>
-(function() {
-  const lightbox = document.getElementById('photoLightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-  const closeBtn = lightbox.querySelector('.lightbox-close');
-
-  document.querySelectorAll('.photo-clickable').forEach(function(img) {
-    img.style.cursor = 'pointer';
-    img.addEventListener('click', function() {
-      lightboxImg.src = this.getAttribute('data-full') || this.src;
-      lightboxImg.alt = this.alt;
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  function closeLightbox() {
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  closeBtn.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', function(e) {
-    if (e.target === lightbox) closeLightbox();
-  });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeLightbox();
-  });
-})();
-</script>
+<script defer src="{{ '/assets/js/people-photos.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>

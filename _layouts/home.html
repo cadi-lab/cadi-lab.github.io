@@ -54,7 +54,7 @@ layout: default
     <div class="professor-card">
       <div class="professor-photo">
         {% if prof.photo %}
-        <img src="{{ '/assets/img/' | append: prof.photo | relative_url }}" alt="{{ prof.name }}">
+        {% include profile-photo.html person=prof width=155 height=190 %}
         {% endif %}
       </div>
       <div class="professor-info">

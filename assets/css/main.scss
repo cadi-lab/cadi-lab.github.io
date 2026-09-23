@@ -1619,6 +1619,17 @@ html[data-theme="dark"] .profile-links a {
   }
 }
 
+.lightbox-status {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
 // ─── Responsive ─────────────────────────────────────────────────────────────
 
 @media (max-width: 480px) {
