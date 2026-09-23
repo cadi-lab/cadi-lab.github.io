@@ -69,17 +69,6 @@ current_members:
     github: "https://github.com/hsiao30919"
     research_tags: []
 
-  - name: "Young Shin"
-    degree: "Undergraduate RA"
-    year: "2025-"
-    program: "College of Electrical Engineering and Computer Science, NTHU"
-    photo: "young_shin.jpg"
-    photo_position: "center center"
-    photo_scale: 0.98
-    photo_bg: "white"
-    bio: "Young is an undergraduate research assistant interested in the intersection of computer science, economics, and marketing analytics. Drawing on previous customer-facing experience at Samsung and Apple, he is especially interested in how data and technology can help us better understand user behavior and decision-making."
-    research_tags: []
-
 alumni:
   - name: "John Loui Santiago"
     degree: "M.S."
@@ -104,6 +93,16 @@ alumni:
     bio: "As a Tax Officer from Saint Lucia, Mave is interested in how regional cultural contexts influence housing markets and organizational behaviour. She aims to produce rigorous quantitative research that strengthens evidence-based policymaking and deepens understanding of Caribbean economic structures."
     linkedin: "https://www.linkedin.com/in/mave-alexander-518406367"
     github: "https://github.com/MaveKimaraAlexander"
+
+  - name: "Young Shin"
+    degree: "Undergraduate RA"
+    year: "2025-26"
+    program: "College of Electrical Engineering and Computer Science, NTHU"
+    photo: "young_shin.jpg"
+    photo_position: "center center"
+    photo_scale: 0.98
+    photo_bg: "white"
+    bio: "Young worked as an undergraduate research assistant interested in the intersection of computer science, economics, and marketing analytics. Drawing on previous customer-facing experience at Samsung and Apple, he is especially interested in how data and technology can help us better understand user behavior and decision-making."
 
   - name: "Zhan-Yi Liao"
     degree: "M.S."
