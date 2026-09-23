@@ -4,7 +4,7 @@
 
   const lightbox = document.getElementById('photoLightbox');
   if (!lightbox) return;
-  const view = document.getElementById('lightboxImg');
+  let view = document.getElementById('lightboxImg');
   const status = document.getElementById('lightboxStatus');
   const closeButton = lightbox.querySelector('.lightbox-close');
   const photos = Array.from(document.querySelectorAll('.photo-clickable'));
@@ -123,6 +123,18 @@
     view.style.height = size.height + 'px';
   }
 
+  function showImage(image, photo) {
+    image.id = 'lightboxImg';
+    image.className = 'lightbox-img';
+    image.alt = photo.alt;
+    // A reused img can keep painting its previous decoded image while its new
+    // src loads. Give each selection its own element, and swap in decoded full
+    // images directly so another person's pixels can never carry over.
+    view.replaceWith(image);
+    view = image;
+    fit(photo);
+  }
+
   async function sharpen(photo, token) {
     try {
       const image = await download(photo, 'click');
@@ -130,7 +142,7 @@
       decoded.src = image.url;
       await decoded.decode();
       if (selected === photo && selection === token) {
-        view.src = image.url;
+        showImage(decoded, photo);
         status.hidden = true;
       }
     } catch (_) {
@@ -145,17 +157,17 @@
     if (!selected) previousOverflow = document.body.style.overflow;
     selected = photo;
     const token = ++selection;
-    fit(photo);
-    view.src = photo.currentSrc || photo.src;
-    view.alt = photo.alt;
+    const preview = new Image();
+    preview.src = photo.currentSrc || photo.src;
+    showImage(preview, photo);
     status.textContent = 'Loading photo…';
     status.hidden = false;
     lightbox.setAttribute('aria-label', 'Enlarged photo of ' + photo.alt);
     lightbox.setAttribute('aria-hidden', 'false');
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
-    closeButton.focus({ preventScroll: true });
     sharpen(photo, token);
+    closeButton.focus({ preventScroll: true });
   }
 
   function close() {
@@ -166,6 +178,7 @@
     lightbox.classList.remove('active');
     lightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = previousOverflow;
+    view.hidden = true;
     view.removeAttribute('src');
     status.hidden = true;
     if (previous) previous.focus({ preventScroll: true });

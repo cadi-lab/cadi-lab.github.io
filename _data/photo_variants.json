@@ -1,4 +1,36 @@
 {
+  "anh_tran.jpg": {
+    "width": 900,
+    "height": 844,
+    "card": [
+      {
+        "path": "/assets/img/optimized/anh_tran-6cb3c29c5301-b478bfe6-341x320.webp",
+        "width": 341,
+        "height": 320,
+        "bytes": 18150
+      },
+      {
+        "path": "/assets/img/optimized/anh_tran-6cb3c29c5301-b478bfe6-512x480.webp",
+        "width": 512,
+        "height": 480,
+        "bytes": 33206
+      },
+      {
+        "path": "/assets/img/optimized/anh_tran-6cb3c29c5301-b478bfe6-900x844.webp",
+        "width": 900,
+        "height": 844,
+        "bytes": 73822
+      }
+    ],
+    "full": [
+      {
+        "path": "/assets/img/optimized/anh_tran-6cb3c29c5301-b478bfe6-900x844.webp",
+        "width": 900,
+        "height": 844,
+        "bytes": 73822
+      }
+    ]
+  },
   "daniel_gonzalez.jpg": {
     "width": 517,
     "height": 506,

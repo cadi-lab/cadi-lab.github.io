@@ -41,11 +41,13 @@ professor:
     line4: "Hsinchu, Taiwan 300"
 
 current_members:
-  - name: "Anh (Mint) Tran"
+  - name: "Tuan Anh (Mint) Tran"
     degree: "PhD Student"
     year: "2026-"
     program: "Institute of Service Science, NTHU"
-    photo: ""
+    photo: "anh_tran.jpg"
+    email: "anhtranpt@iss.nthu.edu.tw"
+    note: "Teaching Assistant, Programming for Business Analytics (PBA)."
     research_tags: []
 
   - name: "Ting-Wen (Keri) Liu"
