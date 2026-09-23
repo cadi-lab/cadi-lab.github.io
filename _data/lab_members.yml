@@ -46,7 +46,8 @@ current_members:
     year: "2026-"
     program: "Institute of Service Science, NTHU"
     photo: "anh_tran.jpg"
-    photo_scale: 0.78
+    photo_scale: 1
+    photo_translate_y: "15%"
     photo_origin: "center bottom"
     photo_bg: "white"
     email: "anhtranpt@iss.nthu.edu.tw"
@@ -58,6 +59,8 @@ current_members:
     program: "Institute of Service Science, NTHU"
     photo: "keri_liu.jpg"
     photo_position: "center 30%"
+    photo_scale: 1.3
+    photo_origin: "center 40%"
     bio: "Keri is a graduate student in Service Science with nearly four years of experience as a marketing specialist. Drawing from her background, she is interested in applying causal inference to understand how marketing strategies and institutional changes influence firm behavior."
     linkedin: "https://www.linkedin.com/in/ting-wen-liu-5289971b0"
     github: "https://github.com/keri0502"
@@ -68,6 +71,8 @@ current_members:
     year: "2026-"
     program: "Institute of Service Science, NTHU"
     photo: "joanna_hsiao.jpg"
+    photo_scale: 1.3
+    photo_origin: "center 40%"
     bio: "Joanna Hsiao is a master's student with three years of industry experience in digital performance and market consumer trend analysis at market research and consulting company. Her research examines how predictive signals shape user behavior in online markets, with a focus on causal identification using observational data and experimental methods."
     linkedin: "https://www.linkedin.com/in/joanna-hsiao-3145711b8/"
     github: "https://github.com/hsiao30919"
