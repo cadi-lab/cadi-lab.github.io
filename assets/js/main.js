@@ -63,19 +63,15 @@
     }
   }
 
-  // Initialise: localStorage > system preference > dark fallback
-  var saved = localStorage.getItem(THEME_KEY);
-  if (!saved) {
-    saved = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-  }
-  applyTheme(saved);
+  // The head restores an explicit choice before paint; otherwise default dark.
+  applyTheme(html.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
 
   if (toggle) {
     toggle.addEventListener('click', function () {
       var current = html.getAttribute('data-theme') || 'dark';
       var next    = current === 'dark' ? 'light' : 'dark';
-      localStorage.setItem(THEME_KEY, next);
       applyTheme(next);
+      try { localStorage.setItem(THEME_KEY, next); } catch (_) {}
     });
   }
 

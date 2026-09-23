@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en' }}" data-theme="dark">
 <head>
+  <script>
+    // Restore an explicit choice before styles load; first visits stay dark.
+    try {
+      if (localStorage.getItem('cadi-theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    } catch (_) {}
+  </script>
   {% include head.html %}
 </head>
 <body>
@@ -9,6 +17,6 @@
     {{ content }}
   </main>
   {% include footer.html %}
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 </body>
 </html>
