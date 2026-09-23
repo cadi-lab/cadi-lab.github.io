@@ -42,7 +42,7 @@ professor:
 
 current_members:
   - name: "Anh (Mint) Tran"
-    degree: "Incoming PhD Student"
+    degree: "PhD Student"
     year: "2026-"
     program: "Institute of Service Science, NTHU"
     photo: ""
@@ -69,26 +69,6 @@ current_members:
     github: "https://github.com/hsiao30919"
     research_tags: []
 
-  - name: "John Loui Santiago"
-    degree: "M.S."
-    year: "2025-"
-    program: "iMBA, NTHU"
-    photo: "john_loui_santiago.jpg"
-    bio: "John Loui Santiago is a graduate student whose research focuses on labor policy within the broader intersection of economics, law, and public policy. With experience helping manage a small business, he is interested in how organizations respond to regulatory and economic environments."
-    linkedin: "https://www.linkedin.com/in/johnlouisantiago/"
-    github: "https://github.com/johnlouisantiago"
-    research_tags: []
-
-  - name: "Mave Kimara Alexander"
-    degree: "M.S."
-    year: "2025-"
-    program: "iMBA, NTHU"
-    photo: "mave_alexander.jpg"
-    bio: "As a Tax Officer from Saint Lucia, Mave is interested in how regional cultural contexts influence housing markets and organizational behaviour. She aims to produce rigorous quantitative research that strengthens evidence-based policymaking and deepens understanding of Caribbean economic structures."
-    linkedin: "https://www.linkedin.com/in/mave-alexander-518406367"
-    github: "https://github.com/MaveKimaraAlexander"
-    research_tags: []
-
   - name: "Young Shin"
     degree: "Undergraduate RA"
     year: "2025-"
@@ -101,6 +81,30 @@ current_members:
     research_tags: []
 
 alumni:
+  - name: "John Loui Santiago"
+    degree: "M.S."
+    year: "2024-26"
+    program: "iMBA, NTHU"
+    photo: "john_loui_santiago.jpg"
+    tag: "Policy Evaluation"
+    thesis: "State Economic Freedom and Firm Size as Moderators of Paid Family Leave’s Effect on Firm Risk-Taking"
+    thesis_url: "https://etd.lib.nthu.edu.tw/detail/0a91ea507b20da363b670efe7e9c0b52/"
+    bio: "John Loui Santiago's research focuses on labor policy within the broader intersection of economics, law, and public policy. With experience helping manage a small business, he is interested in how organizations respond to regulatory and economic environments."
+    linkedin: "https://www.linkedin.com/in/johnlouisantiago/"
+    github: "https://github.com/johnlouisantiago"
+
+  - name: "Mave Kimara Alexander"
+    degree: "M.S."
+    year: "2024-26"
+    program: "iMBA, NTHU"
+    photo: "mave_alexander.jpg"
+    tag: "Platform Economics"
+    thesis: "The Effects of Short-Term Rental Platforms on the Housing Market: Evidence from Saint Lucia Using a Bartik Shift-Share Instrumental Variable Approach"
+    thesis_url: "https://etd.lib.nthu.edu.tw/detail/bb224b60753ae011c0a818548307c9df/"
+    bio: "As a Tax Officer from Saint Lucia, Mave is interested in how regional cultural contexts influence housing markets and organizational behaviour. She aims to produce rigorous quantitative research that strengthens evidence-based policymaking and deepens understanding of Caribbean economic structures."
+    linkedin: "https://www.linkedin.com/in/mave-alexander-518406367"
+    github: "https://github.com/MaveKimaraAlexander"
+
   - name: "Zhan-Yi Liao"
     degree: "M.S."
     year: "2023-25"
