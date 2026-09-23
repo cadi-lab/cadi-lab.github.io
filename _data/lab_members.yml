@@ -42,12 +42,14 @@ professor:
 
 current_members:
   - name: "Tuan Anh (Mint) Tran"
-    degree: "PhD Student"
+    degree: "Ph.D."
     year: "2026-"
     program: "Institute of Service Science, NTHU"
     photo: "anh_tran.jpg"
+    photo_scale: 0.78
+    photo_origin: "center bottom"
+    photo_bg: "white"
     email: "anhtranpt@iss.nthu.edu.tw"
-    note: "Teaching Assistant, Programming for Business Analytics (PBA)."
     research_tags: []
 
   - name: "Ting-Wen (Keri) Liu"

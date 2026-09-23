@@ -17,4 +17,4 @@
   loading="{{ include.loading | default: 'lazy' }}" decoding="async"{% if include.loading == 'eager' %} fetchpriority="high"{% endif %}
   {% if include.interactive %}class="photo-clickable" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Enlarge photo of {{ person.name | escape }}"
   data-original="{{ original_path | relative_url }}"{% if photo %} data-photo-width="{{ photo.width }}" data-photo-height="{{ photo.height }}" data-full-variants="{{ photo.full | jsonify | escape }}"{% endif %}{% endif %}
-  {% if person.photo_position or person.photo_scale %}style="{% if person.photo_position %}object-position: {{ person.photo_position }};{% endif %}{% if person.photo_scale %}transform: scale({{ person.photo_scale }});{% endif %}"{% endif %}>
+  {% if person.photo_position or person.photo_scale or person.photo_origin %}style="{% if person.photo_position %}object-position: {{ person.photo_position }};{% endif %}{% if person.photo_scale %}transform: scale({{ person.photo_scale }});{% endif %}{% if person.photo_origin %}transform-origin: {{ person.photo_origin }};{% endif %}"{% endif %}>
