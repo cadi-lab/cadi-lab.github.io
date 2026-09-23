@@ -16,6 +16,9 @@
   {% elsif paper.year %}
   <div class="paper-venue">{{ paper.year }}</div>
   {% endif %}
+  {% if paper.status_detail %}
+  <div class="paper-detail"><span class="paper-detail-label">Review status:</span> {{ paper.status_detail | escape }}</div>
+  {% endif %}
   {% if paper.advisors %}
   <div class="paper-detail"><span class="paper-detail-label">{% if paper.advisors.size > 1 %}Co-advisors{% else %}Advisor{% endif %}:</span> {{ paper.advisors | join: '; ' }}</div>
   {% endif %}
