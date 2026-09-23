@@ -75,6 +75,29 @@
     });
   }
 
+  // Show a photo's matching backdrop with the image, not as a bright placeholder.
+  document.querySelectorAll('.profile-photo[data-photo-background]').forEach(function (frame) {
+    var photo = frame.querySelector('img');
+    if (!photo) return;
+
+    function reveal() {
+      if (photo.naturalWidth) frame.style.background = frame.dataset.photoBackground;
+      frame.classList.remove('photo-pending');
+    }
+
+    if (photo.complete) {
+      reveal();
+    } else {
+      frame.classList.add('photo-pending');
+      photo.addEventListener('load', function () {
+        photo.decode().catch(function () {}).then(reveal);
+      }, { once: true });
+      photo.addEventListener('error', function () {
+        frame.classList.remove('photo-pending');
+      }, { once: true });
+    }
+  });
+
   /* -------------------------------------------------- */
   /*  Smooth scroll for anchor links                    */
   /* -------------------------------------------------- */

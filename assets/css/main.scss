@@ -1401,6 +1401,10 @@ html[data-theme="dark"] .people-profile-card:hover {
   border-width: 3px;
 }
 
+.profile-photo.photo-pending img {
+  opacity: 0;
+}
+
 .profile-photo--sm {
   width: 60px;
   height: 60px;

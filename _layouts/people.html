@@ -81,7 +81,7 @@ layout: default
   <div class="people-list">
     {% for student in members %}
     <div class="people-profile-card people-profile-card--wide">
-      <div class="profile-photo profile-photo--lg"{% if student.photo_bg %} style="background: {{ student.photo_bg }}"{% endif %}>
+      <div class="profile-photo profile-photo--lg"{% if student.photo_bg %} data-photo-background="{{ student.photo_bg }}"{% endif %}>
         {% if student.photo != "" and student.photo %}
         {% include profile-photo.html person=student interactive=true %}
         {% else %}
@@ -148,7 +148,7 @@ layout: default
       <div class="timeline-cards">
         {% for alum in group.items %}
         <div class="people-profile-card people-profile-card--wide">
-          <div class="profile-photo profile-photo--lg"{% if alum.photo_bg %} style="background: {{ alum.photo_bg }}"{% endif %}>
+          <div class="profile-photo profile-photo--lg"{% if alum.photo_bg %} data-photo-background="{{ alum.photo_bg }}"{% endif %}>
             {% if alum.photo != "" and alum.photo %}
             {% include profile-photo.html person=alum interactive=true %}
             {% else %}
