@@ -45,6 +45,7 @@
   {% if paper.links %}
   <div class="paper-links">
     {% if paper.links.html %}<a href="{{ paper.links.html }}" target="_blank" rel="noopener"><i class="fa-solid fa-link" aria-hidden="true"></i> Link</a>{% endif %}
+    {% if paper.links.dataverse %}<a href="{{ paper.links.dataverse }}" target="_blank" rel="noopener"><i class="fa-solid fa-database" aria-hidden="true"></i> Dataverse</a>{% endif %}
     {% if paper.links.ssrn %}<a href="{{ paper.links.ssrn }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> SSRN</a>{% endif %}
     {% if paper.links.arxiv %}<a href="{{ paper.links.arxiv }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> arXiv</a>{% endif %}
     {% if paper.links.video and paper.links.video != "" %}<a href="{{ paper.links.video }}" target="_blank" rel="noopener"><i class="fa-solid fa-video" aria-hidden="true"></i> Video</a>{% endif %}
